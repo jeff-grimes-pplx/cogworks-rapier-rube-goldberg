@@ -1,0 +1,5669 @@
+{
+  "generatedAt": "2026-11-06T23:48:10.840Z",
+  "engine": "@dimforge/rapier3d-compat (120Hz fixed timestep)",
+  "stageDefinitions": [
+    {
+      "id": 1,
+      "code": "01",
+      "name": "Kickoff Transmission Bearing",
+      "material": "steel-wood"
+    },
+    {
+      "id": 2,
+      "code": "02",
+      "name": "Synchro Hub & Helical Gear Drop",
+      "material": "brass-bell"
+    },
+    {
+      "id": 3,
+      "code": "03",
+      "name": "Double-Lobe Camshaft Lever",
+      "material": "cast-iron"
+    },
+    {
+      "id": 4,
+      "code": "04",
+      "name": "Braided Cable Zipline Trolley",
+      "material": "cable-whirr"
+    },
+    {
+      "id": 5,
+      "code": "05",
+      "name": "Intake Valve Domino Cascade",
+      "material": "valve-ping"
+    },
+    {
+      "id": 6,
+      "code": "06",
+      "name": "Uphill Counterweighted Tires",
+      "material": "rubber-thud"
+    },
+    {
+      "id": 7,
+      "code": "07",
+      "name": "Piston & Connecting-Rod Drop Hammer",
+      "material": "piston-slam"
+    },
+    {
+      "id": 8,
+      "code": "08",
+      "name": "Exhaust Muffler Seesaw & Floor Roll",
+      "material": "muffler-roll"
+    },
+    {
+      "id": 9,
+      "code": "09",
+      "name": "Suspended Tempered-Glass Mobile",
+      "material": "glass-chime"
+    },
+    {
+      "id": 10,
+      "code": "10",
+      "name": "Rain-Sensor Carafe & Walking Wipers",
+      "material": "wiper-servo"
+    },
+    {
+      "id": 11,
+      "code": "11",
+      "name": "Coil-Spring Catapult & Alternator Arc",
+      "material": "spring-twang"
+    },
+    {
+      "id": 12,
+      "code": "12",
+      "name": "Dual-Disc Brake Rotor Spiral Chute",
+      "material": "rotor-whirr"
+    },
+    {
+      "id": 13,
+      "code": "13",
+      "name": "Shock-Absorber Key-Fob & Balanced Finale",
+      "material": "finale-chord"
+    }
+  ],
+  "takes": {
+    "take606": {
+      "takeKey": "take606",
+      "takeNumber": 606,
+      "label": "Take #606 — Calibrated Golden Run",
+      "params": {
+        "launchImpulse": 1,
+        "tireCounterweightMass": 5.8,
+        "frictionScale": 1,
+        "gravityScale": 1,
+        "simSpeed": 1
+      },
+      "expectedOutcome": "SUCCESS_ALL_13_STAGES",
+      "preLaunchTire1StabilityDeltaM": 0.01474,
+      "completedAllStages": true,
+      "completedStagesCount": 13,
+      "totalStagesCount": 13,
+      "durationSeconds": 18.492,
+      "failedStage": null,
+      "failedReason": null,
+      "bannerUnfurled": true,
+      "stageTimestamps": {
+        "1": 0,
+        "2": 1.083,
+        "3": 1.683,
+        "4": 3.192,
+        "5": 4.208,
+        "6": 4.525,
+        "7": 6.933,
+        "8": 7.725,
+        "9": 8.617,
+        "10": 13.242,
+        "11": 15.625,
+        "12": 16.45,
+        "13": 16.992
+      },
+      "stageImpulsesNs": {
+        "1": 3.2,
+        "2": 4.8,
+        "3": 5.4,
+        "4": 3.6,
+        "5": 3.1,
+        "6": 2.35,
+        "7": 4.2,
+        "8": 5.8,
+        "9": 4.1,
+        "10": 2.5,
+        "11": 6.8,
+        "12": 3.2,
+        "13": 3.8
+      },
+      "stageStatus": {
+        "1": "complete",
+        "2": "complete",
+        "3": "complete",
+        "4": "complete",
+        "5": "complete",
+        "6": "complete",
+        "7": "complete",
+        "8": "complete",
+        "9": "complete",
+        "10": "complete",
+        "11": "complete",
+        "12": "complete",
+        "13": "complete"
+      },
+      "uphillTiresSummary": {
+        "tire1DeltaX_m": 1.231,
+        "tire1DeltaY_m": 0.162,
+        "tire2DeltaX_m": 1.558,
+        "tire2DeltaY_m": 0.205,
+        "tire3DeltaX_m": 1.412,
+        "tire3DeltaY_m": 0.161
+      },
+      "eventsCount": 28,
+      "events": [
+        {
+          "time": 0,
+          "step": 0,
+          "stageId": 1,
+          "stageName": "Kickoff Transmission Bearing",
+          "type": "stage_triggered",
+          "impulseNs": 3.2,
+          "sound": "steel-wood"
+        },
+        {
+          "time": 1.0833,
+          "step": 130,
+          "stageId": 2,
+          "stageName": "Synchro Hub & Helical Gear Drop",
+          "type": "stage_triggered",
+          "impulseNs": 4.8,
+          "sound": "brass-bell"
+        },
+        {
+          "time": 1.6833,
+          "step": 202,
+          "stageId": 3,
+          "stageName": "Double-Lobe Camshaft Lever",
+          "type": "stage_triggered",
+          "impulseNs": 5.4,
+          "sound": "cast-iron"
+        },
+        {
+          "time": 3.1917,
+          "step": 383,
+          "stageId": 4,
+          "stageName": "Braided Cable Zipline Trolley",
+          "type": "stage_triggered",
+          "impulseNs": 3.6,
+          "sound": "cable-whirr"
+        },
+        {
+          "time": 4.2083,
+          "step": 505,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "stage_triggered",
+          "impulseNs": 3.1,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.325,
+          "step": 519,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 1,
+          "pitchIndex": 0,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.375,
+          "step": 525,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 3,
+          "pitchIndex": 2,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.4,
+          "step": 528,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 4,
+          "pitchIndex": 3,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.425,
+          "step": 531,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 5,
+          "pitchIndex": 4,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.4333,
+          "step": 532,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 2,
+          "pitchIndex": 1,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.45,
+          "step": 534,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 6,
+          "pitchIndex": 5,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.475,
+          "step": 537,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 7,
+          "pitchIndex": 6,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.5,
+          "step": 540,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 8,
+          "pitchIndex": 7,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.525,
+          "step": 543,
+          "stageId": 6,
+          "stageName": "Uphill Counterweighted Tires",
+          "type": "stage_triggered",
+          "impulseNs": 2.35,
+          "sound": "rubber-thud"
+        },
+        {
+          "time": 6.9333,
+          "step": 832,
+          "stageId": 7,
+          "stageName": "Piston & Connecting-Rod Drop Hammer",
+          "type": "stage_triggered",
+          "impulseNs": 4.2,
+          "sound": "piston-slam"
+        },
+        {
+          "time": 7.725,
+          "step": 927,
+          "stageId": 8,
+          "stageName": "Exhaust Muffler Seesaw & Floor Roll",
+          "type": "stage_triggered",
+          "impulseNs": 5.8,
+          "sound": "muffler-roll"
+        },
+        {
+          "time": 8.6167,
+          "step": 1034,
+          "stageId": 9,
+          "stageName": "Suspended Tempered-Glass Mobile",
+          "type": "stage_triggered",
+          "impulseNs": 4.1,
+          "sound": "glass-chime"
+        },
+        {
+          "time": 8.7333,
+          "step": 1048,
+          "stageId": 9,
+          "stageName": "Suspended Tempered-Glass Mobile",
+          "type": "glass_louver_chime",
+          "louverIndex": 1,
+          "sound": "glass-chime"
+        },
+        {
+          "time": 9.025,
+          "step": 1083,
+          "stageId": 9,
+          "stageName": "Suspended Tempered-Glass Mobile",
+          "type": "glass_louver_chime",
+          "louverIndex": 2,
+          "sound": "glass-chime"
+        },
+        {
+          "time": 9.1167,
+          "step": 1094,
+          "stageId": 9,
+          "stageName": "Suspended Tempered-Glass Mobile",
+          "type": "glass_louver_chime",
+          "louverIndex": 3,
+          "sound": "glass-chime"
+        },
+        {
+          "time": 9.1583,
+          "step": 1099,
+          "stageId": 9,
+          "stageName": "Suspended Tempered-Glass Mobile",
+          "type": "glass_louver_chime",
+          "louverIndex": 4,
+          "sound": "glass-chime"
+        },
+        {
+          "time": 10.25,
+          "step": 1230,
+          "stageId": 9,
+          "stageName": "Suspended Tempered-Glass Mobile",
+          "type": "glass_louver_chime",
+          "louverIndex": 5,
+          "sound": "glass-chime"
+        },
+        {
+          "time": 13.2417,
+          "step": 1589,
+          "stageId": 10,
+          "stageName": "Rain-Sensor Carafe & Walking Wipers",
+          "type": "stage_triggered",
+          "impulseNs": 2.5,
+          "sound": "wiper-servo"
+        },
+        {
+          "time": 15.625,
+          "step": 1875,
+          "stageId": 11,
+          "stageName": "Coil-Spring Catapult & Alternator Arc",
+          "type": "stage_triggered",
+          "impulseNs": 6.8,
+          "sound": "spring-twang"
+        },
+        {
+          "time": 16.45,
+          "step": 1974,
+          "stageId": 12,
+          "stageName": "Dual-Disc Brake Rotor Spiral Chute",
+          "type": "stage_triggered",
+          "impulseNs": 3.2,
+          "sound": "rotor-whirr"
+        },
+        {
+          "time": 16.9917,
+          "step": 2039,
+          "stageId": 13,
+          "stageName": "Shock-Absorber Key-Fob & Balanced Finale",
+          "type": "stage_triggered",
+          "impulseNs": 3.8,
+          "sound": "piston-slam"
+        },
+        {
+          "time": 17.2917,
+          "step": 2075,
+          "stageId": 13,
+          "stageName": "Shock-Absorber Key-Fob & Balanced Finale",
+          "type": "key_fob_pressed",
+          "sound": "key-fob-beep"
+        },
+        {
+          "time": 17.9917,
+          "step": 2159,
+          "stageId": 13,
+          "stageName": "Shock-Absorber Key-Fob & Balanced Finale",
+          "type": "finale_completed",
+          "sound": "finale-chord",
+          "banner": "TAKE 606 — ISN'T IT NICE WHEN THINGS JUST WORK?"
+        }
+      ],
+      "sampledTimeSeries": [
+        {
+          "t": 0.008,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 202.43,
+          "totalPE": 1596.92,
+          "tire1X": 0.0006,
+          "tire3X": 0.0006,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.74,
+            "y": 5.23,
+            "speed": 2.64,
+            "omega": -26.26,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.108,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 201.04,
+          "totalPE": 1598.46,
+          "tire1X": 0.0068,
+          "tire3X": 0.0068,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.47,
+            "y": 5.21,
+            "speed": 2.66,
+            "omega": -26.26,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.208,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 202.19,
+          "totalPE": 1599.99,
+          "tire1X": 0.0111,
+          "tire3X": 0.0111,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.21,
+            "y": 5.12,
+            "speed": 2.97,
+            "omega": -26.26,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.308,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 187.89,
+          "totalPE": 1601.44,
+          "tire1X": 0.0138,
+          "tire3X": 0.0138,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.92,
+            "y": 5.03,
+            "speed": 3.22,
+            "omega": -25.2,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.408,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 179.43,
+          "totalPE": 1603,
+          "tire1X": 0.015,
+          "tire3X": 0.015,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.59,
+            "y": 4.95,
+            "speed": 3.53,
+            "omega": -24.49,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.508,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 170.15,
+          "totalPE": 1604.37,
+          "tire1X": 0.0146,
+          "tire3X": 0.0146,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.23,
+            "y": 4.86,
+            "speed": 3.84,
+            "omega": -23.68,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.608,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 161.51,
+          "totalPE": 1605.43,
+          "tire1X": 0.0127,
+          "tire3X": 0.0127,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -23.84,
+            "y": 4.76,
+            "speed": 4.16,
+            "omega": -22.86,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.708,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 152.93,
+          "totalPE": 1606.19,
+          "tire1X": 0.0092,
+          "tire3X": 0.0092,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -23.43,
+            "y": 4.65,
+            "speed": 4.47,
+            "omega": -22.05,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.808,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 145.18,
+          "totalPE": 1607.17,
+          "tire1X": 0.0042,
+          "tire3X": 0.0042,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -22.98,
+            "y": 4.54,
+            "speed": 4.79,
+            "omega": -21.24,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.908,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 144.6,
+          "totalPE": 1608.01,
+          "tire1X": -0.0022,
+          "tire3X": -0.0022,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -22.5,
+            "y": 4.42,
+            "speed": 5.05,
+            "omega": -21.03,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 1.008,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 154.14,
+          "totalPE": 1608.89,
+          "tire1X": -0.0099,
+          "tire3X": -0.0099,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -22,
+            "y": 4.3,
+            "speed": 5.22,
+            "omega": -21.74,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 1.108,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 140.45,
+          "totalPE": 1610.43,
+          "tire1X": -0.0073,
+          "tire3X": -0.0073,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.58,
+            "y": 3.91,
+            "speed": 1.5,
+            "omega": -7.22,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.208,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 130.77,
+          "totalPE": 1613.89,
+          "tire1X": -0.0018,
+          "tire3X": -0.0018,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.43,
+            "y": 3.9,
+            "speed": 1.55,
+            "omega": -7.16,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.308,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 123.37,
+          "totalPE": 1615.08,
+          "tire1X": 0.0017,
+          "tire3X": 0.0016,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.28,
+            "y": 3.82,
+            "speed": 1.97,
+            "omega": -7.08,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.408,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 119.84,
+          "totalPE": 1613.14,
+          "tire1X": 0.0031,
+          "tire3X": 0.0031,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.12,
+            "y": 3.65,
+            "speed": 2.68,
+            "omega": -7.05,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.508,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 119.84,
+          "totalPE": 1607.99,
+          "tire1X": 0.0026,
+          "tire3X": 0.0025,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -19.97,
+            "y": 3.38,
+            "speed": 3.51,
+            "omega": -7.01,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.608,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 123.29,
+          "totalPE": 1599.66,
+          "tire1X": 0.0001,
+          "tire3X": 0,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -19.82,
+            "y": 3.02,
+            "speed": 4.4,
+            "omega": -6.98,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.708,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 126.97,
+          "totalPE": 1588.94,
+          "tire1X": -0.0044,
+          "tire3X": -0.0045,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.56,
+            "y": 3.1,
+            "speed": 5.64,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.808,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 76.31,
+          "totalPE": 1592.89,
+          "tire1X": -0.0095,
+          "tire3X": -0.0096,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.43,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.908,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 51.35,
+          "totalPE": 1595.78,
+          "tire1X": -0.0063,
+          "tire3X": -0.0061,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.41,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.008,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 42.3,
+          "totalPE": 1599.63,
+          "tire1X": -0.0039,
+          "tire3X": -0.0035,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.39,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.108,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 36.71,
+          "totalPE": 1602.03,
+          "tire1X": -0.0036,
+          "tire3X": -0.0028,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.37,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.208,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 31.32,
+          "totalPE": 1604.32,
+          "tire1X": -0.0052,
+          "tire3X": -0.0042,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.35,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.308,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 27.02,
+          "totalPE": 1606.43,
+          "tire1X": -0.0087,
+          "tire3X": -0.0074,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.32,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.408,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 23.34,
+          "totalPE": 1608.45,
+          "tire1X": -0.0074,
+          "tire3X": -0.008,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.3,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.508,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 20.32,
+          "totalPE": 1610.32,
+          "tire1X": -0.0068,
+          "tire3X": -0.0066,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.28,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.608,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 19.2,
+          "totalPE": 1611.99,
+          "tire1X": -0.0082,
+          "tire3X": -0.0071,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.26,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.708,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 22.39,
+          "totalPE": 1613.54,
+          "tire1X": -0.0085,
+          "tire3X": -0.0086,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.24,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.808,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 26.06,
+          "totalPE": 1615,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.22,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.908,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 30.19,
+          "totalPE": 1616.34,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.2,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 3.008,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 34.77,
+          "totalPE": 1617.57,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.18,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 3.108,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 39.8,
+          "totalPE": 1618.69,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.16,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 3.208,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 44.68,
+          "totalPE": 1619.69,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -14.19,
+            "y": 2.89,
+            "speed": 4.87,
+            "omega": -1.71,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.308,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 40.25,
+          "totalPE": 1621.48,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -13.71,
+            "y": 2.78,
+            "speed": 5.05,
+            "omega": -1.76,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.408,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 37.78,
+          "totalPE": 1623.15,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -13.21,
+            "y": 2.68,
+            "speed": 5.23,
+            "omega": -1.83,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.508,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 35.87,
+          "totalPE": 1624.66,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -12.68,
+            "y": 2.57,
+            "speed": 5.42,
+            "omega": -1.91,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.608,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 34.53,
+          "totalPE": 1626.01,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -12.14,
+            "y": 2.46,
+            "speed": 5.6,
+            "omega": -1.98,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.708,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 33.75,
+          "totalPE": 1627.19,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -11.59,
+            "y": 2.35,
+            "speed": 5.78,
+            "omega": -2.05,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.808,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 33.53,
+          "totalPE": 1628.21,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -11.01,
+            "y": 2.23,
+            "speed": 5.96,
+            "omega": -2.13,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.908,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 33.96,
+          "totalPE": 1629.05,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -10.42,
+            "y": 2.11,
+            "speed": 6.15,
+            "omega": -2.2,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 4.008,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 35.31,
+          "totalPE": 1629.6,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -9.8,
+            "y": 1.99,
+            "speed": 6.33,
+            "omega": -2.27,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 4.108,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 39.01,
+          "totalPE": 1629.72,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -9.18,
+            "y": 1.86,
+            "speed": 6.51,
+            "omega": -2.35,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 4.208,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 76.77,
+          "totalPE": 1629.1,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "intakeValve_1",
+            "x": -8.15,
+            "y": 1.88,
+            "speed": 2.94,
+            "omega": -13.28,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.308,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 44.13,
+          "totalPE": 1627.9,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "intakeValve_2",
+            "x": -7.42,
+            "y": 1.88,
+            "speed": 4.33,
+            "omega": 2.63,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.408,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 57.74,
+          "totalPE": 1624.84,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "intakeValve_3",
+            "x": -6.91,
+            "y": 1.88,
+            "speed": 3.49,
+            "omega": 1.34,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.508,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 73.91,
+          "totalPE": 1618.97,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "intakeValve_4",
+            "x": -6.4,
+            "y": 1.87,
+            "speed": 3.11,
+            "omega": -1.27,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.608,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 54.61,
+          "totalPE": 1615.53,
+          "tire1X": 0.0248,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.02,
+            "y": 2.16,
+            "speed": 0.61,
+            "omega": -0.7,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 4.708,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 55.81,
+          "totalPE": 1612.86,
+          "tire1X": 0.0607,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.99,
+            "y": 2.17,
+            "speed": 0.6,
+            "omega": -0.69,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 4.808,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 55.27,
+          "totalPE": 1610.71,
+          "tire1X": 0.097,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.95,
+            "y": 2.17,
+            "speed": 0.62,
+            "omega": -0.71,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 4.908,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 31.04,
+          "totalPE": 1612.11,
+          "tire1X": 0.1352,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.91,
+            "y": 2.18,
+            "speed": 0.66,
+            "omega": -0.76,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.008,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 31.72,
+          "totalPE": 1613,
+          "tire1X": 0.1771,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.87,
+            "y": 2.18,
+            "speed": 0.73,
+            "omega": -0.85,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.108,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 22.33,
+          "totalPE": 1614.81,
+          "tire1X": 0.2036,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.85,
+            "y": 2.19,
+            "speed": 0.51,
+            "omega": -1.64,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.208,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 18.68,
+          "totalPE": 1617.83,
+          "tire1X": 0.2104,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.84,
+            "y": 2.19,
+            "speed": 0.62,
+            "omega": -1.35,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.308,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 19.32,
+          "totalPE": 1619.8,
+          "tire1X": 0.2198,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.83,
+            "y": 2.19,
+            "speed": 0.78,
+            "omega": -1.34,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.408,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 27.65,
+          "totalPE": 1620.09,
+          "tire1X": 0.2376,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.81,
+            "y": 2.19,
+            "speed": 0.71,
+            "omega": -2.28,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.508,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 27.42,
+          "totalPE": 1617.28,
+          "tire1X": 0.2598,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.79,
+            "y": 2.2,
+            "speed": 0.54,
+            "omega": -1.22,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.608,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 34.29,
+          "totalPE": 1611.13,
+          "tire1X": 0.2833,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.74,
+            "y": 2.33,
+            "speed": 0.42,
+            "omega": -0.48,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.708,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 46.05,
+          "totalPE": 1602.09,
+          "tire1X": 0.311,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.71,
+            "y": 2.34,
+            "speed": 0.49,
+            "omega": -0.56,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.808,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 19.74,
+          "totalPE": 1591.41,
+          "tire1X": 0.3432,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.68,
+            "y": 2.34,
+            "speed": 0.57,
+            "omega": -0.66,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 5.908,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 18.39,
+          "totalPE": 1597.04,
+          "tire1X": 0.3813,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.64,
+            "y": 2.35,
+            "speed": 0.68,
+            "omega": -0.8,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.008,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 16.15,
+          "totalPE": 1599.69,
+          "tire1X": 0.4209,
+          "tire3X": 0.0036,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.6,
+            "y": 2.35,
+            "speed": 0.36,
+            "omega": -0.43,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.108,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.71,
+          "totalPE": 1600.87,
+          "tire1X": 0.4363,
+          "tire3X": 0.019,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.55,
+            "y": 2.49,
+            "speed": 0.25,
+            "omega": -0.29,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.208,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.76,
+          "totalPE": 1603.55,
+          "tire1X": 0.4519,
+          "tire3X": 0.0339,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.54,
+            "y": 2.49,
+            "speed": 0.26,
+            "omega": -0.29,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.308,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.94,
+          "totalPE": 1606.39,
+          "tire1X": 0.4677,
+          "tire3X": 0.0495,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.55,
+            "y": 2.36,
+            "speed": 0.29,
+            "omega": -0.37,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.408,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 15.11,
+          "totalPE": 1609.23,
+          "tire1X": 0.4848,
+          "tire3X": 0.0667,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.5,
+            "y": 2.5,
+            "speed": 0.3,
+            "omega": -0.35,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.508,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 15.5,
+          "totalPE": 1612.12,
+          "tire1X": 0.5042,
+          "tire3X": 0.0858,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.49,
+            "y": 2.5,
+            "speed": 0.34,
+            "omega": -0.39,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.608,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 16.03,
+          "totalPE": 1615.07,
+          "tire1X": 0.5266,
+          "tire3X": 0.108,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.46,
+            "y": 2.5,
+            "speed": 0.4,
+            "omega": -0.46,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.708,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 16.94,
+          "totalPE": 1618.09,
+          "tire1X": 0.5526,
+          "tire3X": 0.1341,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.44,
+            "y": 2.5,
+            "speed": 0.47,
+            "omega": -0.54,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.808,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 18.25,
+          "totalPE": 1621.22,
+          "tire1X": 0.5834,
+          "tire3X": 0.1652,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.41,
+            "y": 2.51,
+            "speed": 0.56,
+            "omega": -0.66,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 6.908,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 20.32,
+          "totalPE": 1624.54,
+          "tire1X": 0.621,
+          "tire3X": 0.2029,
+          "activeBody": {
+            "id": "uphillTire_3",
+            "x": -0.37,
+            "y": 2.51,
+            "speed": 0.67,
+            "omega": -0.8,
+            "mass": 6.9
+          }
+        },
+        {
+          "t": 7.008,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 24.64,
+          "totalPE": 1628.14,
+          "tire1X": 0.6672,
+          "tire3X": 0.2489,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 0.64,
+            "y": 2.42,
+            "speed": 0.86,
+            "omega": 0,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.108,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 28.86,
+          "totalPE": 1633.69,
+          "tire1X": 0.7194,
+          "tire3X": 0.3058,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 0.73,
+            "y": 2.42,
+            "speed": 0.86,
+            "omega": 0,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.208,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 35.96,
+          "totalPE": 1639.49,
+          "tire1X": 0.788,
+          "tire3X": 0.3759,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 0.82,
+            "y": 2.41,
+            "speed": 0.92,
+            "omega": 0,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.308,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 51.38,
+          "totalPE": 1643.76,
+          "tire1X": 0.8759,
+          "tire3X": 0.4649,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 0.91,
+            "y": 2.37,
+            "speed": 1.25,
+            "omega": -0.24,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.408,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 64.65,
+          "totalPE": 1648.89,
+          "tire1X": 0.9858,
+          "tire3X": 0.5793,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 1.02,
+            "y": 2.26,
+            "speed": 1.83,
+            "omega": -0.48,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.508,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 97.29,
+          "totalPE": 1650.6,
+          "tire1X": 1.1372,
+          "tire3X": 0.7267,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 1.07,
+            "y": 2.07,
+            "speed": 2.42,
+            "omega": -0.47,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.608,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 123.97,
+          "totalPE": 1644.48,
+          "tire1X": 1.3195,
+          "tire3X": 0.9161,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 1.05,
+            "y": 1.78,
+            "speed": 3.39,
+            "omega": -0.47,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.708,
+          "activeStage": 7,
+          "completedStages": 6,
+          "totalKE": 200.89,
+          "totalPE": 1631.97,
+          "tire1X": 1.426,
+          "tire3X": 1.1904,
+          "activeBody": {
+            "id": "pistonHammer",
+            "x": 1.03,
+            "y": 1.39,
+            "speed": 4.36,
+            "omega": -0.46,
+            "mass": 3.6
+          }
+        },
+        {
+          "t": 7.808,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 179.35,
+          "totalPE": 1618.6,
+          "tire1X": 1.4398,
+          "tire3X": 1.4119,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 5.92,
+            "y": 11.1,
+            "speed": 2.69,
+            "omega": -15.69,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 7.908,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 215.02,
+          "totalPE": 1600.46,
+          "tire1X": 1.3656,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 6.18,
+            "y": 11.1,
+            "speed": 2.66,
+            "omega": -15.67,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.008,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 214.11,
+          "totalPE": 1592.31,
+          "tire1X": 1.2261,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 6.45,
+            "y": 11.01,
+            "speed": 2.98,
+            "omega": -15.66,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.108,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 209.4,
+          "totalPE": 1587.18,
+          "tire1X": 1.2132,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 6.71,
+            "y": 10.82,
+            "speed": 3.55,
+            "omega": -15.64,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.208,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 211.85,
+          "totalPE": 1580.55,
+          "tire1X": 1.2603,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 6.97,
+            "y": 10.53,
+            "speed": 4.27,
+            "omega": -15.62,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.308,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 217.8,
+          "totalPE": 1572.46,
+          "tire1X": 1.2667,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 7.23,
+            "y": 10.14,
+            "speed": 5.07,
+            "omega": -15.61,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.408,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 227.37,
+          "totalPE": 1562.3,
+          "tire1X": 1.2301,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 7.5,
+            "y": 9.66,
+            "speed": 5.93,
+            "omega": -15.59,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.508,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 238.43,
+          "totalPE": 1550.67,
+          "tire1X": 1.2322,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 7.76,
+            "y": 9.08,
+            "speed": 6.82,
+            "omega": -15.58,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.608,
+          "activeStage": 8,
+          "completedStages": 7,
+          "totalKE": 249.5,
+          "totalPE": 1536.98,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "exhaustMuffler",
+            "x": 8.02,
+            "y": 8.4,
+            "speed": 7.73,
+            "omega": -15.56,
+            "mass": 2.1
+          }
+        },
+        {
+          "t": 8.708,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 275.26,
+          "totalPE": 1520.72,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 9.48,
+            "y": 2.03,
+            "speed": 1.58,
+            "omega": 1.06,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 8.808,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 283.48,
+          "totalPE": 1502.11,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 9.55,
+            "y": 2.03,
+            "speed": 0.01,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 8.908,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 301.19,
+          "totalPE": 1481.41,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 9.56,
+            "y": 2.03,
+            "speed": 0.01,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.008,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 569.61,
+          "totalPE": 1460,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 10.03,
+            "y": 2.14,
+            "speed": 3.24,
+            "omega": -75.81,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.108,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 830.18,
+          "totalPE": 1472.19,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 10.35,
+            "y": 2.63,
+            "speed": 7099.58,
+            "omega": 159096.97,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.208,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 1189.25,
+          "totalPE": 1482.53,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 10.99,
+            "y": 3.17,
+            "speed": 572.64,
+            "omega": -460.84,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.308,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 479.17,
+          "totalPE": 1473.15,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_2",
+            "x": 11.18,
+            "y": 2.46,
+            "speed": 2.81,
+            "omega": 7.5,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.408,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 733.54,
+          "totalPE": 1478,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_2",
+            "x": 11.24,
+            "y": 2.53,
+            "speed": 8.49,
+            "omega": 10.44,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.508,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 435.75,
+          "totalPE": 1482.3,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_2",
+            "x": 11.43,
+            "y": 2.81,
+            "speed": 3.84,
+            "omega": -1.85,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.608,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 429.74,
+          "totalPE": 1476.41,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 10.83,
+            "y": 3.29,
+            "speed": 1.65,
+            "omega": -1.05,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.708,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 430.82,
+          "totalPE": 1470.95,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 10.81,
+            "y": 3.19,
+            "speed": 0.56,
+            "omega": -0.28,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.808,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 454.27,
+          "totalPE": 1463.77,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 10.78,
+            "y": 3.08,
+            "speed": 1.62,
+            "omega": -0.97,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 9.908,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 449.15,
+          "totalPE": 1463.87,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.75,
+            "y": 2.3,
+            "speed": 0.46,
+            "omega": -12.79,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.008,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 420.59,
+          "totalPE": 1464.57,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_2",
+            "x": 11.18,
+            "y": 2.47,
+            "speed": 0.02,
+            "omega": -0.06,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.108,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 472.2,
+          "totalPE": 1464.86,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 10.8,
+            "y": 3.12,
+            "speed": 9.49,
+            "omega": -6.33,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.208,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 414.87,
+          "totalPE": 1460.41,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_2",
+            "x": 9.69,
+            "y": 2.08,
+            "speed": 0.13,
+            "omega": 0.09,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.308,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 418.48,
+          "totalPE": 1463.3,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_5",
+            "x": 11.26,
+            "y": 2.54,
+            "speed": 2.04,
+            "omega": -1.36,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.408,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 411.34,
+          "totalPE": 1466.74,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_4",
+            "x": 12.93,
+            "y": 2.77,
+            "speed": 5.73,
+            "omega": -3.82,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.508,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 375.61,
+          "totalPE": 1466.48,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_5",
+            "x": 11.11,
+            "y": 2.74,
+            "speed": 0.79,
+            "omega": -0.53,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.608,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 365.72,
+          "totalPE": 1465.92,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_5",
+            "x": 11.1,
+            "y": 2.75,
+            "speed": 0.67,
+            "omega": 0.35,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.708,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 615.45,
+          "totalPE": 1463.97,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_5",
+            "x": 11.17,
+            "y": 2.65,
+            "speed": 1.84,
+            "omega": 1.22,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.808,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 572.14,
+          "totalPE": 1464.65,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_2",
+            "x": 9.65,
+            "y": 2.09,
+            "speed": 18.68,
+            "omega": -13.44,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 10.908,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 373.26,
+          "totalPE": 1459.2,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_1",
+            "x": 10.75,
+            "y": 2.99,
+            "speed": 2.41,
+            "omega": 3.15,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.008,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 872.83,
+          "totalPE": 1443.32,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.108,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 477.13,
+          "totalPE": 1437.4,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.208,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 407.73,
+          "totalPE": 1426.64,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.308,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 388.03,
+          "totalPE": 1417.3,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.408,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 395.04,
+          "totalPE": 1417.73,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.508,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 369.26,
+          "totalPE": 1416.58,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.608,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 372.35,
+          "totalPE": 1413.72,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.708,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 369.3,
+          "totalPE": 1410.08,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.808,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 366.95,
+          "totalPE": 1411.15,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 11.908,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 614.88,
+          "totalPE": 1410.97,
+          "tire1X": 1.2308,
+          "tire3X": 1.4116,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.008,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 357.88,
+          "totalPE": 1411.73,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.108,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 348.03,
+          "totalPE": 1411.37,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.208,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 342.52,
+          "totalPE": 1411.06,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.308,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 341.37,
+          "totalPE": 1410.29,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.408,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 341.09,
+          "totalPE": 1408.93,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.508,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 366.3,
+          "totalPE": 1409.44,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.608,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 338.42,
+          "totalPE": 1409.91,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.708,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 335.02,
+          "totalPE": 1410.07,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.808,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 347.86,
+          "totalPE": 1409.71,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 12.908,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 332.91,
+          "totalPE": 1409.2,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 13.008,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 327.29,
+          "totalPE": 1408.76,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 13.108,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 322.43,
+          "totalPE": 1408.53,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 13.208,
+          "activeStage": 9,
+          "completedStages": 8,
+          "totalKE": 321.74,
+          "totalPE": 1408.75,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "glassLouver_3",
+            "x": 11.32,
+            "y": 1.27,
+            "speed": 4968.85,
+            "omega": 112821.69,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 13.308,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 1323.08,
+          "totalPE": 1410.37,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "waterCarafe",
+            "x": 13.3,
+            "y": 1.93,
+            "speed": 13.22,
+            "omega": 59.98,
+            "mass": 0.75
+          }
+        },
+        {
+          "t": 13.408,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 829.75,
+          "totalPE": 1441.24,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 15.17,
+            "y": 1.64,
+            "speed": 1.48,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 13.508,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 260.54,
+          "totalPE": 1449.35,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 15.36,
+            "y": 1.64,
+            "speed": 1.42,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 13.608,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 72,
+          "totalPE": 1447.35,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 15.46,
+            "y": 1.64,
+            "speed": 1.48,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 13.708,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 72.57,
+          "totalPE": 1446,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 15.65,
+            "y": 1.64,
+            "speed": 1.42,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 13.808,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 68.09,
+          "totalPE": 1445.58,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 15.75,
+            "y": 1.64,
+            "speed": 1.48,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 13.908,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 65.24,
+          "totalPE": 1442.95,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 15.94,
+            "y": 1.64,
+            "speed": 1.42,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.008,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 64.59,
+          "totalPE": 1443.07,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 16.04,
+            "y": 1.64,
+            "speed": 1.48,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.108,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 426.75,
+          "totalPE": 1450.75,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 16.23,
+            "y": 1.64,
+            "speed": 1.43,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.208,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 69.86,
+          "totalPE": 1458.59,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 16.33,
+            "y": 1.64,
+            "speed": 1.47,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.308,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 166.02,
+          "totalPE": 1456.63,
+          "tire1X": 1.2308,
+          "tire3X": 1.4116,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 16.52,
+            "y": 1.64,
+            "speed": 1.43,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.408,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 107.21,
+          "totalPE": 1447,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 16.62,
+            "y": 1.64,
+            "speed": 1.47,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.508,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 311.8,
+          "totalPE": 1446.58,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 16.81,
+            "y": 1.64,
+            "speed": 1.43,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.608,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 307.9,
+          "totalPE": 1446.91,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 16.91,
+            "y": 1.64,
+            "speed": 1.47,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.708,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 304.64,
+          "totalPE": 1445.1,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.1,
+            "y": 1.64,
+            "speed": 1.43,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.808,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 349.24,
+          "totalPE": 1446.4,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.2,
+            "y": 1.64,
+            "speed": 1.47,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 14.908,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 297.36,
+          "totalPE": 1446.05,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.38,
+            "y": 1.64,
+            "speed": 1.43,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.008,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 297.17,
+          "totalPE": 1449.89,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.48,
+            "y": 1.64,
+            "speed": 1.46,
+            "omega": 0,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.108,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 295.25,
+          "totalPE": 1450.36,
+          "tire1X": 1.2308,
+          "tire3X": 1.4116,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.62,
+            "y": 1.65,
+            "speed": 1.46,
+            "omega": -0.56,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.208,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 296.25,
+          "totalPE": 1451.05,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.63,
+            "y": 1.69,
+            "speed": 1.54,
+            "omega": -1.01,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.308,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 291.39,
+          "totalPE": 1451.07,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.63,
+            "y": 1.74,
+            "speed": 1.48,
+            "omega": -0.05,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.408,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 309.55,
+          "totalPE": 1449.91,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.64,
+            "y": 1.78,
+            "speed": 1.61,
+            "omega": -1.45,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.508,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 311.3,
+          "totalPE": 1450.19,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.73,
+            "y": 1.96,
+            "speed": 2.61,
+            "omega": -7.5,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.608,
+          "activeStage": 10,
+          "completedStages": 9,
+          "totalKE": 552.21,
+          "totalPE": 1452.78,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "wiperCrawler",
+            "x": 17.83,
+            "y": 2.13,
+            "speed": 1.84,
+            "omega": -6.93,
+            "mass": 1.6
+          }
+        },
+        {
+          "t": 15.708,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 819.7,
+          "totalPE": 1461.44,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 19.7,
+            "y": 2.52,
+            "speed": 6.21,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 15.808,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 298.98,
+          "totalPE": 1464.42,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 20.15,
+            "y": 2.89,
+            "speed": 5.58,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 15.908,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 1042.88,
+          "totalPE": 1471.91,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 20.61,
+            "y": 3.16,
+            "speed": 5.07,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 16.008,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 401.28,
+          "totalPE": 1471.82,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 21.06,
+            "y": 3.34,
+            "speed": 4.71,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 16.108,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 554.15,
+          "totalPE": 1468.66,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 21.51,
+            "y": 3.42,
+            "speed": 4.54,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 16.208,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 290.28,
+          "totalPE": 1463.41,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 21.97,
+            "y": 3.4,
+            "speed": 4.58,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 16.308,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 290.27,
+          "totalPE": 1460.75,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 22.42,
+            "y": 3.28,
+            "speed": 4.82,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 16.408,
+          "activeStage": 11,
+          "completedStages": 10,
+          "totalKE": 793.06,
+          "totalPE": 1452.19,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "alternatorBall",
+            "x": 22.87,
+            "y": 3.06,
+            "speed": 5.23,
+            "omega": 0,
+            "mass": 1
+          }
+        },
+        {
+          "t": 16.508,
+          "activeStage": 12,
+          "completedStages": 11,
+          "totalKE": 804.48,
+          "totalPE": 1459.38,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "scalePan",
+            "x": 25.75,
+            "y": 1.17,
+            "speed": 0,
+            "omega": 0,
+            "mass": 0.65
+          }
+        },
+        {
+          "t": 16.608,
+          "activeStage": 12,
+          "completedStages": 11,
+          "totalKE": 793.44,
+          "totalPE": 1455.69,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "scalePan",
+            "x": 25.75,
+            "y": 1.17,
+            "speed": 0,
+            "omega": 0,
+            "mass": 0.65
+          }
+        },
+        {
+          "t": 16.708,
+          "activeStage": 12,
+          "completedStages": 11,
+          "totalKE": 816.54,
+          "totalPE": 1455.51,
+          "tire1X": 1.2308,
+          "tire3X": 1.4116,
+          "activeBody": {
+            "id": "scalePan",
+            "x": 25.75,
+            "y": 1.17,
+            "speed": 0,
+            "omega": 0,
+            "mass": 0.65
+          }
+        },
+        {
+          "t": 16.808,
+          "activeStage": 12,
+          "completedStages": 11,
+          "totalKE": 798.85,
+          "totalPE": 1451.76,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "scalePan",
+            "x": 25.75,
+            "y": 1.17,
+            "speed": 0,
+            "omega": 0,
+            "mass": 0.65
+          }
+        },
+        {
+          "t": 16.908,
+          "activeStage": 12,
+          "completedStages": 11,
+          "totalKE": 796.99,
+          "totalPE": 1447.99,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "scalePan",
+            "x": 25.75,
+            "y": 1.17,
+            "speed": 0,
+            "omega": 0,
+            "mass": 0.65
+          }
+        },
+        {
+          "t": 17.008,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 782.95,
+          "totalPE": 1444.26,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "shockPlunger",
+            "x": 26.65,
+            "y": 2.43,
+            "speed": 1.08,
+            "omega": 0,
+            "mass": 2.8
+          }
+        },
+        {
+          "t": 17.108,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 791.68,
+          "totalPE": 1438.64,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "shockPlunger",
+            "x": 26.65,
+            "y": 2.26,
+            "speed": 2.39,
+            "omega": 0,
+            "mass": 2.8
+          }
+        },
+        {
+          "t": 17.208,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 798.9,
+          "totalPE": 1427.52,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "shockPlunger",
+            "x": 26.65,
+            "y": 1.95,
+            "speed": 3.7,
+            "omega": 0,
+            "mass": 2.8
+          }
+        },
+        {
+          "t": 17.308,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 1070,
+          "totalPE": 1398.41,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 29.17,
+            "y": 1.72,
+            "speed": 1.5,
+            "omega": -7.57,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 17.408,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 820.03,
+          "totalPE": 1412.67,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 29.32,
+            "y": 1.72,
+            "speed": 1.5,
+            "omega": -7.53,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 17.508,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 1067.67,
+          "totalPE": 1412.7,
+          "tire1X": 1.2308,
+          "tire3X": 1.4116,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 29.47,
+            "y": 1.72,
+            "speed": 1.49,
+            "omega": -7.49,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 17.608,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 820.32,
+          "totalPE": 1414.74,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 29.62,
+            "y": 1.72,
+            "speed": 1.49,
+            "omega": -7.46,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 17.708,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 822.05,
+          "totalPE": 1412.58,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 29.77,
+            "y": 1.72,
+            "speed": 1.49,
+            "omega": -7.41,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 17.808,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 819.25,
+          "totalPE": 1408.99,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 29.92,
+            "y": 1.71,
+            "speed": 1.5,
+            "omega": -7.36,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 17.908,
+          "activeStage": 13,
+          "completedStages": 12,
+          "totalKE": 817.85,
+          "totalPE": 1406.88,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 30.07,
+            "y": 1.7,
+            "speed": 1.54,
+            "omega": -7.29,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 17.992,
+          "activeStage": 13,
+          "completedStages": 13,
+          "totalKE": 819.09,
+          "totalPE": 1404.88,
+          "tire1X": 1.2308,
+          "tire3X": 1.4115,
+          "activeBody": {
+            "id": "heroCoupe",
+            "x": 30.2,
+            "y": 1.68,
+            "speed": 1.6,
+            "omega": -7.2,
+            "mass": 3.2
+          }
+        }
+      ]
+    },
+    "take142": {
+      "takeKey": "take142",
+      "takeNumber": 142,
+      "label": "Take #142 — Under-Weighted Tire Stalls on Ramp",
+      "params": {
+        "launchImpulse": 1,
+        "tireCounterweightMass": 0.25,
+        "frictionScale": 1,
+        "gravityScale": 1,
+        "simSpeed": 1
+      },
+      "expectedOutcome": "STALL_STAGE_06_UPHILL_TIRES",
+      "preLaunchTire1StabilityDeltaM": 0.00897,
+      "completedAllStages": false,
+      "completedStagesCount": 5,
+      "totalStagesCount": 13,
+      "durationSeconds": 7.858,
+      "failedStage": 6,
+      "failedReason": "Stage 06 Uphill Tire stalled on 7.5° ramp (counterweight 0.25 kg insufficient to overcome uphill gravity torque; Δx = +0.09 m).",
+      "bannerUnfurled": false,
+      "stageTimestamps": {
+        "1": 0,
+        "2": 1.083,
+        "3": 1.683,
+        "4": 3.192,
+        "5": 4.208,
+        "6": 4.525,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": null
+      },
+      "stageImpulsesNs": {
+        "1": 3.2,
+        "2": 4.8,
+        "3": 5.4,
+        "4": 3.6,
+        "5": 3.1,
+        "6": 0.52,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0
+      },
+      "stageStatus": {
+        "1": "complete",
+        "2": "complete",
+        "3": "complete",
+        "4": "complete",
+        "5": "complete",
+        "6": "failed",
+        "7": "ready",
+        "8": "ready",
+        "9": "ready",
+        "10": "ready",
+        "11": "ready",
+        "12": "ready",
+        "13": "ready"
+      },
+      "uphillTiresSummary": {
+        "tire1DeltaX_m": 0.042,
+        "tire1DeltaY_m": 0.006,
+        "tire2DeltaX_m": -0.012,
+        "tire2DeltaY_m": -0.002,
+        "tire3DeltaX_m": -0.012,
+        "tire3DeltaY_m": -0.002
+      },
+      "eventsCount": 15,
+      "events": [
+        {
+          "time": 0,
+          "step": 0,
+          "stageId": 1,
+          "stageName": "Kickoff Transmission Bearing",
+          "type": "stage_triggered",
+          "impulseNs": 3.2,
+          "sound": "steel-wood"
+        },
+        {
+          "time": 1.0833,
+          "step": 130,
+          "stageId": 2,
+          "stageName": "Synchro Hub & Helical Gear Drop",
+          "type": "stage_triggered",
+          "impulseNs": 4.8,
+          "sound": "brass-bell"
+        },
+        {
+          "time": 1.6833,
+          "step": 202,
+          "stageId": 3,
+          "stageName": "Double-Lobe Camshaft Lever",
+          "type": "stage_triggered",
+          "impulseNs": 5.4,
+          "sound": "cast-iron"
+        },
+        {
+          "time": 3.1917,
+          "step": 383,
+          "stageId": 4,
+          "stageName": "Braided Cable Zipline Trolley",
+          "type": "stage_triggered",
+          "impulseNs": 3.6,
+          "sound": "cable-whirr"
+        },
+        {
+          "time": 4.2083,
+          "step": 505,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "stage_triggered",
+          "impulseNs": 3.1,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.325,
+          "step": 519,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 1,
+          "pitchIndex": 0,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.375,
+          "step": 525,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 3,
+          "pitchIndex": 2,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.4,
+          "step": 528,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 4,
+          "pitchIndex": 3,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.425,
+          "step": 531,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 5,
+          "pitchIndex": 4,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.4333,
+          "step": 532,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 2,
+          "pitchIndex": 1,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.45,
+          "step": 534,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 6,
+          "pitchIndex": 5,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.475,
+          "step": 537,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 7,
+          "pitchIndex": 6,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.5,
+          "step": 540,
+          "stageId": 5,
+          "stageName": "Intake Valve Domino Cascade",
+          "type": "valve_domino_ping",
+          "valveIndex": 8,
+          "pitchIndex": 7,
+          "sound": "valve-ping"
+        },
+        {
+          "time": 4.525,
+          "step": 543,
+          "stageId": 6,
+          "stageName": "Uphill Counterweighted Tires",
+          "type": "stage_triggered",
+          "impulseNs": 0.52,
+          "sound": "rubber-thud"
+        },
+        {
+          "time": 7.3583,
+          "step": 883,
+          "stageId": 6,
+          "stageName": "Uphill Counterweighted Tires",
+          "type": "stage_failed",
+          "reason": "Stage 06 Uphill Tire stalled on 7.5° ramp (counterweight 0.25 kg insufficient to overcome uphill gravity torque; Δx = +0.09 m).",
+          "tire1DeltaX": 0.09
+        }
+      ],
+      "sampledTimeSeries": [
+        {
+          "t": 0.008,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 202.23,
+          "totalPE": 1176.47,
+          "tire1X": 0.0006,
+          "tire3X": 0.0006,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.74,
+            "y": 5.23,
+            "speed": 2.64,
+            "omega": -26.26,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.108,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 200.92,
+          "totalPE": 1177.87,
+          "tire1X": 0.0047,
+          "tire3X": 0.0047,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.47,
+            "y": 5.21,
+            "speed": 2.66,
+            "omega": -26.26,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.208,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 202.15,
+          "totalPE": 1179.27,
+          "tire1X": 0.0026,
+          "tire3X": 0.0026,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.21,
+            "y": 5.12,
+            "speed": 2.97,
+            "omega": -26.26,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.308,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 187.94,
+          "totalPE": 1180.61,
+          "tire1X": -0.0057,
+          "tire3X": -0.0057,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.92,
+            "y": 5.03,
+            "speed": 3.22,
+            "omega": -25.2,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.408,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 179.43,
+          "totalPE": 1182.16,
+          "tire1X": -0.0152,
+          "tire3X": -0.0152,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.59,
+            "y": 4.95,
+            "speed": 3.53,
+            "omega": -24.49,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.508,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 170.18,
+          "totalPE": 1183.51,
+          "tire1X": -0.0083,
+          "tire3X": -0.0084,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.23,
+            "y": 4.86,
+            "speed": 3.84,
+            "omega": -23.68,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.608,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 161.48,
+          "totalPE": 1184.64,
+          "tire1X": -0.0043,
+          "tire3X": -0.0044,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -23.84,
+            "y": 4.76,
+            "speed": 4.16,
+            "omega": -22.86,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.708,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 152.86,
+          "totalPE": 1185.48,
+          "tire1X": -0.0067,
+          "tire3X": -0.0068,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -23.43,
+            "y": 4.65,
+            "speed": 4.47,
+            "omega": -22.05,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.808,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 145.04,
+          "totalPE": 1186.58,
+          "tire1X": -0.0134,
+          "tire3X": -0.0135,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -22.98,
+            "y": 4.54,
+            "speed": 4.79,
+            "omega": -21.24,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.908,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 144.36,
+          "totalPE": 1187.59,
+          "tire1X": -0.01,
+          "tire3X": -0.0097,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -22.5,
+            "y": 4.42,
+            "speed": 5.05,
+            "omega": -21.03,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 1.008,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 154.05,
+          "totalPE": 1188.52,
+          "tire1X": -0.0115,
+          "tire3X": -0.0106,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -22,
+            "y": 4.3,
+            "speed": 5.22,
+            "omega": -21.74,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 1.108,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 140.26,
+          "totalPE": 1190.13,
+          "tire1X": -0.012,
+          "tire3X": -0.0118,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.58,
+            "y": 3.91,
+            "speed": 1.5,
+            "omega": -7.22,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.208,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 130.68,
+          "totalPE": 1193.44,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.43,
+            "y": 3.9,
+            "speed": 1.55,
+            "omega": -7.16,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.308,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 123.34,
+          "totalPE": 1194.54,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.28,
+            "y": 3.82,
+            "speed": 1.97,
+            "omega": -7.08,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.408,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 119.84,
+          "totalPE": 1192.56,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.12,
+            "y": 3.65,
+            "speed": 2.68,
+            "omega": -7.05,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.508,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 119.83,
+          "totalPE": 1187.44,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -19.97,
+            "y": 3.38,
+            "speed": 3.51,
+            "omega": -7.01,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.608,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 123.23,
+          "totalPE": 1179.17,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -19.82,
+            "y": 3.02,
+            "speed": 4.4,
+            "omega": -6.98,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.708,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 126.83,
+          "totalPE": 1168.58,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.56,
+            "y": 3.1,
+            "speed": 5.64,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.808,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 76.3,
+          "totalPE": 1172.54,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.43,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.908,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 51.3,
+          "totalPE": 1175.45,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.41,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.008,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 42.3,
+          "totalPE": 1179.23,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.39,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.108,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 36.71,
+          "totalPE": 1181.62,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.37,
+            "y": 3.1,
+            "speed": 0.21,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.208,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 31.29,
+          "totalPE": 1183.96,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.35,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.308,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 26.97,
+          "totalPE": 1186.14,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.32,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.408,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 23.32,
+          "totalPE": 1188.15,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.3,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.508,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 20.32,
+          "totalPE": 1190.01,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.28,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.608,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 19.18,
+          "totalPE": 1191.7,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.26,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.708,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 22.39,
+          "totalPE": 1193.27,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.24,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.808,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 26.06,
+          "totalPE": 1194.73,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.22,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.908,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 30.19,
+          "totalPE": 1196.08,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.2,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 3.008,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 34.77,
+          "totalPE": 1197.31,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.18,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 3.108,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 39.8,
+          "totalPE": 1198.43,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.16,
+            "y": 3.1,
+            "speed": 0.2,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 3.208,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 44.68,
+          "totalPE": 1199.42,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -14.19,
+            "y": 2.89,
+            "speed": 4.87,
+            "omega": -1.71,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.308,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 40.25,
+          "totalPE": 1201.22,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -13.71,
+            "y": 2.78,
+            "speed": 5.05,
+            "omega": -1.76,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.408,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 37.78,
+          "totalPE": 1202.89,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -13.21,
+            "y": 2.68,
+            "speed": 5.23,
+            "omega": -1.83,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.508,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 35.87,
+          "totalPE": 1204.4,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -12.68,
+            "y": 2.57,
+            "speed": 5.42,
+            "omega": -1.91,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.608,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 34.53,
+          "totalPE": 1205.74,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -12.14,
+            "y": 2.46,
+            "speed": 5.6,
+            "omega": -1.98,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.708,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 33.75,
+          "totalPE": 1206.92,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -11.59,
+            "y": 2.35,
+            "speed": 5.78,
+            "omega": -2.05,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.808,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 33.53,
+          "totalPE": 1207.94,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -11.01,
+            "y": 2.23,
+            "speed": 5.96,
+            "omega": -2.13,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.908,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 33.96,
+          "totalPE": 1208.78,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -10.42,
+            "y": 2.11,
+            "speed": 6.15,
+            "omega": -2.2,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 4.008,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 35.31,
+          "totalPE": 1209.33,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -9.8,
+            "y": 1.99,
+            "speed": 6.33,
+            "omega": -2.27,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 4.108,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 39.01,
+          "totalPE": 1209.46,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -9.18,
+            "y": 1.86,
+            "speed": 6.51,
+            "omega": -2.35,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 4.208,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 76.77,
+          "totalPE": 1208.83,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "intakeValve_1",
+            "x": -8.15,
+            "y": 1.88,
+            "speed": 2.94,
+            "omega": -13.28,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.308,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 44.13,
+          "totalPE": 1207.63,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "intakeValve_2",
+            "x": -7.42,
+            "y": 1.88,
+            "speed": 4.33,
+            "omega": 2.63,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.408,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 57.74,
+          "totalPE": 1204.57,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "intakeValve_3",
+            "x": -6.91,
+            "y": 1.88,
+            "speed": 3.49,
+            "omega": 1.34,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.508,
+          "activeStage": 5,
+          "completedStages": 4,
+          "totalKE": 73.91,
+          "totalPE": 1198.7,
+          "tire1X": -0.0122,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "intakeValve_4",
+            "x": -6.4,
+            "y": 1.87,
+            "speed": 3.11,
+            "omega": -1.27,
+            "mass": 0.8
+          }
+        },
+        {
+          "t": 4.608,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 53.07,
+          "totalPE": 1195.02,
+          "tire1X": 0.0228,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.02,
+            "y": 2.16,
+            "speed": 0.55,
+            "omega": -0.92,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 4.708,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 54.25,
+          "totalPE": 1192.12,
+          "tire1X": 0.0675,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.98,
+            "y": 2.17,
+            "speed": 0.49,
+            "omega": -0.82,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 4.808,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 53.53,
+          "totalPE": 1189.71,
+          "tire1X": 0.1073,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.94,
+            "y": 2.18,
+            "speed": 0.43,
+            "omega": -0.73,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 4.908,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 28.96,
+          "totalPE": 1190.83,
+          "tire1X": 0.1427,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.9,
+            "y": 2.18,
+            "speed": 0.38,
+            "omega": -0.65,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.008,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 29.07,
+          "totalPE": 1191.4,
+          "tire1X": 0.1742,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.87,
+            "y": 2.18,
+            "speed": 0.34,
+            "omega": -0.58,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.108,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 17.71,
+          "totalPE": 1192.94,
+          "tire1X": 0.1984,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.85,
+            "y": 2.19,
+            "speed": 0.14,
+            "omega": -0.24,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.208,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.74,
+          "totalPE": 1195.65,
+          "tire1X": 0.2063,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.84,
+            "y": 2.19,
+            "speed": 0.06,
+            "omega": -0.1,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.308,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.51,
+          "totalPE": 1197.61,
+          "tire1X": 0.2082,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.81,
+            "y": 2.32,
+            "speed": 0.01,
+            "omega": 0.01,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.408,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 18.46,
+          "totalPE": 1197.65,
+          "tire1X": 0.2059,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.81,
+            "y": 2.32,
+            "speed": 0.05,
+            "omega": 0.08,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.508,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 23.93,
+          "totalPE": 1194.45,
+          "tire1X": 0.2001,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_2",
+            "x": -1.82,
+            "y": 2.32,
+            "speed": 0.09,
+            "omega": 0.14,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.608,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 32.61,
+          "totalPE": 1187.88,
+          "tire1X": 0.191,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.86,
+            "y": 2.19,
+            "speed": 0.12,
+            "omega": 0.2,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.708,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 43.83,
+          "totalPE": 1178.33,
+          "tire1X": 0.179,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.87,
+            "y": 2.19,
+            "speed": 0.15,
+            "omega": 0.26,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.808,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 16.7,
+          "totalPE": 1167.05,
+          "tire1X": 0.1639,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.88,
+            "y": 2.18,
+            "speed": 0.19,
+            "omega": 0.32,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 5.908,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.12,
+          "totalPE": 1171.97,
+          "tire1X": 0.1457,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.9,
+            "y": 2.18,
+            "speed": 0.23,
+            "omega": 0.39,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.008,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.7,
+          "totalPE": 1173.77,
+          "tire1X": 0.124,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.92,
+            "y": 2.18,
+            "speed": 0.27,
+            "omega": 0.46,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.108,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14,
+          "totalPE": 1174.49,
+          "tire1X": 0.0985,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.95,
+            "y": 2.17,
+            "speed": 0.31,
+            "omega": 0.53,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.208,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14,
+          "totalPE": 1176.72,
+          "tire1X": 0.0689,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.98,
+            "y": 2.17,
+            "speed": 0.37,
+            "omega": 0.62,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.308,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.04,
+          "totalPE": 1179.07,
+          "tire1X": 0.0348,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.01,
+            "y": 2.17,
+            "speed": 0.42,
+            "omega": 0.71,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.408,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.17,
+          "totalPE": 1181.39,
+          "tire1X": -0.0043,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.05,
+            "y": 2.16,
+            "speed": 0.48,
+            "omega": 0.81,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.508,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 13.95,
+          "totalPE": 1183.87,
+          "tire1X": -0.0339,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.08,
+            "y": 2.17,
+            "speed": 0.23,
+            "omega": 0.39,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.608,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 13.94,
+          "totalPE": 1186.26,
+          "tire1X": -0.0428,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.09,
+            "y": 2.17,
+            "speed": 0,
+            "omega": -0.01,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.708,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.1,
+          "totalPE": 1188.54,
+          "tire1X": -0.0331,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.08,
+            "y": 2.17,
+            "speed": 0.23,
+            "omega": -0.38,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.808,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.32,
+          "totalPE": 1190.74,
+          "tire1X": -0.0058,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.05,
+            "y": 2.16,
+            "speed": 0.37,
+            "omega": -0.61,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 6.908,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.35,
+          "totalPE": 1193.11,
+          "tire1X": 0.0228,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3.02,
+            "y": 2.16,
+            "speed": 0.3,
+            "omega": -0.5,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 7.008,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.55,
+          "totalPE": 1195.51,
+          "tire1X": 0.0457,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -3,
+            "y": 2.17,
+            "speed": 0.23,
+            "omega": -0.39,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 7.108,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.61,
+          "totalPE": 1197.83,
+          "tire1X": 0.0634,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.98,
+            "y": 2.17,
+            "speed": 0.17,
+            "omega": -0.29,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 7.208,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.76,
+          "totalPE": 1200.13,
+          "tire1X": 0.076,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.97,
+            "y": 2.17,
+            "speed": 0.12,
+            "omega": -0.2,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 7.308,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.88,
+          "totalPE": 1202.39,
+          "tire1X": 0.0837,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.96,
+            "y": 2.17,
+            "speed": 0.06,
+            "omega": -0.11,
+            "mass": 1.35
+          }
+        },
+        {
+          "t": 7.358,
+          "activeStage": 6,
+          "completedStages": 5,
+          "totalKE": 14.93,
+          "totalPE": 1203.5,
+          "tire1X": 0.0858,
+          "tire3X": -0.0122,
+          "activeBody": {
+            "id": "uphillTire_1",
+            "x": -2.96,
+            "y": 2.17,
+            "speed": 0.04,
+            "omega": -0.06,
+            "mass": 1.35
+          }
+        }
+      ]
+    },
+    "take419": {
+      "takeKey": "take419",
+      "takeNumber": 419,
+      "label": "Take #419 — Excess Impulse Overshoots Zipline",
+      "params": {
+        "launchImpulse": 1.65,
+        "tireCounterweightMass": 5.8,
+        "frictionScale": 0.65,
+        "gravityScale": 1,
+        "simSpeed": 1
+      },
+      "expectedOutcome": "OVERSHOOT_STAGE_04_ZIPLINE",
+      "preLaunchTire1StabilityDeltaM": 0.01474,
+      "completedAllStages": false,
+      "completedStagesCount": 3,
+      "totalStagesCount": 13,
+      "durationSeconds": 3.533,
+      "failedStage": 4,
+      "failedReason": "Stage 04 Zipline Trolley vaulted over Stage 05 Intake Valves due to excess launch impulse.",
+      "bannerUnfurled": false,
+      "stageTimestamps": {
+        "1": 0,
+        "2": 0.858,
+        "3": 1.4,
+        "4": 2.7,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": null,
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": null
+      },
+      "stageImpulsesNs": {
+        "1": 5.28,
+        "2": 7.92,
+        "3": 8.91,
+        "4": 5.94,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0
+      },
+      "stageStatus": {
+        "1": "complete",
+        "2": "complete",
+        "3": "complete",
+        "4": "failed",
+        "5": "failed",
+        "6": "ready",
+        "7": "ready",
+        "8": "ready",
+        "9": "ready",
+        "10": "ready",
+        "11": "ready",
+        "12": "ready",
+        "13": "ready"
+      },
+      "uphillTiresSummary": {
+        "tire1DeltaX_m": -0.009,
+        "tire1DeltaY_m": -0.001,
+        "tire2DeltaX_m": -0.009,
+        "tire2DeltaY_m": -0.001,
+        "tire3DeltaX_m": -0.009,
+        "tire3DeltaY_m": -0.001
+      },
+      "eventsCount": 5,
+      "events": [
+        {
+          "time": 0,
+          "step": 0,
+          "stageId": 1,
+          "stageName": "Kickoff Transmission Bearing",
+          "type": "stage_triggered",
+          "impulseNs": 5.28,
+          "sound": "steel-wood"
+        },
+        {
+          "time": 0.8583,
+          "step": 103,
+          "stageId": 2,
+          "stageName": "Synchro Hub & Helical Gear Drop",
+          "type": "stage_triggered",
+          "impulseNs": 7.92,
+          "sound": "brass-bell"
+        },
+        {
+          "time": 1.4,
+          "step": 168,
+          "stageId": 3,
+          "stageName": "Double-Lobe Camshaft Lever",
+          "type": "stage_triggered",
+          "impulseNs": 8.91,
+          "sound": "cast-iron"
+        },
+        {
+          "time": 2.7,
+          "step": 324,
+          "stageId": 4,
+          "stageName": "Braided Cable Zipline Trolley",
+          "type": "stage_triggered",
+          "impulseNs": 5.94,
+          "sound": "cable-whirr"
+        },
+        {
+          "time": 3.0333,
+          "step": 364,
+          "stageId": 4,
+          "stageName": "Braided Cable Zipline Trolley",
+          "type": "stage_failed",
+          "reason": "Stage 04 Zipline Trolley vaulted over Stage 05 Intake Valves due to excess launch impulse.",
+          "trolleyPos": {
+            "x": -8.34,
+            "y": 2.98
+          }
+        }
+      ],
+      "sampledTimeSeries": [
+        {
+          "t": 0.008,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 254.42,
+          "totalPE": 1596.91,
+          "tire1X": 0.0006,
+          "tire3X": 0.0006,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.72,
+            "y": 5.23,
+            "speed": 4.16,
+            "omega": -42,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.108,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.98,
+          "totalPE": 1598.44,
+          "tire1X": 0.0068,
+          "tire3X": 0.0068,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -25.3,
+            "y": 5.21,
+            "speed": 4.17,
+            "omega": -42,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.208,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.91,
+          "totalPE": 1599.98,
+          "tire1X": 0.0111,
+          "tire3X": 0.0111,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.89,
+            "y": 5.12,
+            "speed": 4.37,
+            "omega": -42,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.308,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.86,
+          "totalPE": 1600.14,
+          "tire1X": 0.0138,
+          "tire3X": 0.0138,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.47,
+            "y": 4.93,
+            "speed": 4.77,
+            "omega": -42,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.408,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.86,
+          "totalPE": 1601.01,
+          "tire1X": 0.015,
+          "tire3X": 0.015,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -24.02,
+            "y": 4.8,
+            "speed": 4.88,
+            "omega": -41.62,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.508,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.97,
+          "totalPE": 1601.8,
+          "tire1X": 0.0146,
+          "tire3X": 0.0146,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -23.53,
+            "y": 4.68,
+            "speed": 5.16,
+            "omega": -41.08,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.608,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.74,
+          "totalPE": 1602.26,
+          "tire1X": 0.0127,
+          "tire3X": 0.0127,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -23.02,
+            "y": 4.55,
+            "speed": 5.45,
+            "omega": -40.55,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.708,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.77,
+          "totalPE": 1602.9,
+          "tire1X": 0.0092,
+          "tire3X": 0.0092,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -22.47,
+            "y": 4.42,
+            "speed": 5.73,
+            "omega": -40.03,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.808,
+          "activeStage": 1,
+          "completedStages": 0,
+          "totalKE": 252.83,
+          "totalPE": 1603.46,
+          "tire1X": 0.0042,
+          "tire3X": 0.0042,
+          "activeBody": {
+            "id": "kickoffBearing",
+            "x": -21.9,
+            "y": 4.27,
+            "speed": 6.02,
+            "omega": -39.5,
+            "mass": 1.4
+          }
+        },
+        {
+          "t": 0.908,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 353.37,
+          "totalPE": 1605.51,
+          "tire1X": -0.0022,
+          "tire3X": -0.0022,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.5,
+            "y": 3.91,
+            "speed": 2.47,
+            "omega": -11.9,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.008,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 353.95,
+          "totalPE": 1607.4,
+          "tire1X": -0.0099,
+          "tire3X": -0.0099,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20.25,
+            "y": 3.85,
+            "speed": 2.67,
+            "omega": -11.85,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.108,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 357.8,
+          "totalPE": 1606.11,
+          "tire1X": -0.0073,
+          "tire3X": -0.0073,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -20,
+            "y": 3.7,
+            "speed": 3.17,
+            "omega": -11.79,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.208,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 364.45,
+          "totalPE": 1601.88,
+          "tire1X": -0.0018,
+          "tire3X": -0.0018,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -19.76,
+            "y": 3.45,
+            "speed": 3.85,
+            "omega": -11.73,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.308,
+          "activeStage": 2,
+          "completedStages": 1,
+          "totalKE": 362.3,
+          "totalPE": 1594.4,
+          "tire1X": 0.0017,
+          "tire3X": 0.0016,
+          "activeBody": {
+            "id": "helicalGear",
+            "x": -19.55,
+            "y": 3.1,
+            "speed": 4.16,
+            "omega": -11.32,
+            "mass": 3.2
+          }
+        },
+        {
+          "t": 1.408,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 426.12,
+          "totalPE": 1583.15,
+          "tire1X": 0.0031,
+          "tire3X": 0.0031,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.62,
+            "y": 3.1,
+            "speed": 9.31,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.508,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 327.89,
+          "totalPE": 1586.57,
+          "tire1X": 0.0026,
+          "tire3X": 0.0025,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.42,
+            "y": 3.1,
+            "speed": 0.23,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.608,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 322.7,
+          "totalPE": 1590.94,
+          "tire1X": 0.0001,
+          "tire3X": 0,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.4,
+            "y": 3.1,
+            "speed": 0.23,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.708,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 319.11,
+          "totalPE": 1594.21,
+          "tire1X": -0.0044,
+          "tire3X": -0.0045,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.37,
+            "y": 3.1,
+            "speed": 0.23,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.808,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 316.82,
+          "totalPE": 1596.09,
+          "tire1X": -0.0095,
+          "tire3X": -0.0096,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.35,
+            "y": 3.1,
+            "speed": 0.23,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 1.908,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 316.19,
+          "totalPE": 1596.48,
+          "tire1X": -0.0063,
+          "tire3X": -0.0061,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.33,
+            "y": 3.1,
+            "speed": 0.23,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.008,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 312.82,
+          "totalPE": 1596.56,
+          "tire1X": -0.0039,
+          "tire3X": -0.0035,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.3,
+            "y": 3.1,
+            "speed": 0.23,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.108,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 310.53,
+          "totalPE": 1597.9,
+          "tire1X": -0.0036,
+          "tire3X": -0.0028,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.28,
+            "y": 3.1,
+            "speed": 0.23,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.208,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 300.33,
+          "totalPE": 1599.15,
+          "tire1X": -0.0052,
+          "tire3X": -0.0042,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.26,
+            "y": 3.1,
+            "speed": 0.22,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.308,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 290.57,
+          "totalPE": 1600.23,
+          "tire1X": -0.0087,
+          "tire3X": -0.0074,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.24,
+            "y": 3.1,
+            "speed": 0.22,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.408,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 281.16,
+          "totalPE": 1601.24,
+          "tire1X": -0.0074,
+          "tire3X": -0.008,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.21,
+            "y": 3.1,
+            "speed": 0.22,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.508,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 272.2,
+          "totalPE": 1602.11,
+          "tire1X": -0.0068,
+          "tire3X": -0.0066,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.19,
+            "y": 3.1,
+            "speed": 0.22,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.608,
+          "activeStage": 3,
+          "completedStages": 2,
+          "totalKE": 263.68,
+          "totalPE": 1602.78,
+          "tire1X": -0.0082,
+          "tire3X": -0.0071,
+          "activeBody": {
+            "id": "steelPushrod",
+            "x": -17.17,
+            "y": 3.1,
+            "speed": 0.22,
+            "omega": 0,
+            "mass": 0.85
+          }
+        },
+        {
+          "t": 2.708,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 305.88,
+          "totalPE": 1603.86,
+          "tire1X": -0.0085,
+          "tire3X": -0.0086,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -11.33,
+            "y": 2.34,
+            "speed": 9.87,
+            "omega": -1.09,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 2.808,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 292.2,
+          "totalPE": 1610.14,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -10.41,
+            "y": 2.65,
+            "speed": 9.55,
+            "omega": -1.08,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 2.908,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 280.28,
+          "totalPE": 1614.92,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -9.49,
+            "y": 2.86,
+            "speed": 9.32,
+            "omega": -1.08,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.008,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 270.14,
+          "totalPE": 1618.2,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -8.57,
+            "y": 2.97,
+            "speed": 9.19,
+            "omega": -1.08,
+            "mass": 1.45
+          }
+        },
+        {
+          "t": 3.033,
+          "activeStage": 4,
+          "completedStages": 3,
+          "totalKE": 267.87,
+          "totalPE": 1618.79,
+          "tire1X": -0.0085,
+          "tire3X": -0.0085,
+          "activeBody": {
+            "id": "ziplineTrolley",
+            "x": -8.34,
+            "y": 2.98,
+            "speed": 9.18,
+            "omega": -1.08,
+            "mass": 1.45
+          }
+        }
+      ]
+    }
+  }
+}

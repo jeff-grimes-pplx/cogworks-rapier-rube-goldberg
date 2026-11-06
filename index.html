@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cogworks — Take 606</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='13' fill='%2318181b' stroke='%23f59e0b' stroke-width='3'/><circle cx='16' cy='16' r='5' fill='%23dc2626'/></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app-shell">
+      <!-- Full-Viewport 3D WebGL Atelier Canvas -->
+      <canvas id="atelier-canvas" aria-label="Cogworks 3D Rapier Physics Rube Goldberg Machine"></canvas>
+
+      <!-- Top Studio Command Bar -->
+      <header class="hud-topbar">
+        <div class="brand-cluster">
+          <h1 class="atelier-title">COGWORKS — TAKE 606</h1>
+          <div id="run-status-pill" class="status-pill status-ready">READY • STAGE 01</div>
+        </div>
+
+        <div class="primary-actions">
+          <button id="btn-launch" class="btn-primary" type="button">
+            Flick Transmission Bearing
+          </button>
+          <button id="btn-pause" class="btn-secondary" type="button" disabled>
+            Pause
+          </button>
+          <button id="btn-reset" class="btn-secondary" type="button">
+            Reset Rig
+          </button>
+        </div>
+
+        <div class="preset-cluster" role="group" aria-label="Physics Take Presets">
+          <button id="preset-take606" class="chip-btn active" type="button" data-preset="take606">
+            Take #606 Golden
+          </button>
+          <button id="preset-take142" class="chip-btn" type="button" data-preset="take142">
+            Take #142 Stall
+          </button>
+          <button id="preset-take419" class="chip-btn" type="button" data-preset="take419">
+            Take #419 Overshoot
+          </button>
+        </div>
+
+        <div class="camera-cluster" role="group" aria-label="Camera Modes">
+          <button id="cam-dolly" class="chip-btn active" type="button" data-cam="dolly">
+            Technocrane Dolly
+          </button>
+          <button id="cam-overview" class="chip-btn" type="button" data-cam="overview">
+            Gallery Wide
+          </button>
+          <button id="cam-stage" class="chip-btn" type="button" data-cam="stage">
+            Stage Inspector
+          </button>
+          <button id="cam-orbit" class="chip-btn" type="button" data-cam="orbit">
+            Free Orbit
+          </button>
+          <button id="btn-audio" class="chip-btn active" type="button" aria-pressed="true">
+            Audio: ON
+          </button>
+          <button id="btn-toggle-drawer" class="chip-btn active" type="button" aria-expanded="true">
+            Sandbox Panel
+          </button>
+        </div>
+      </header>
+
+      <!-- Compact Mobile Telemetry Strip (visible on < 900px viewports) -->
+      <div id="mobile-telemetry-bar" class="mobile-telemetry-bar" aria-label="Live Physics Telemetry">
+        <span id="mob-stages">0/13 STAGES</span>
+        <span class="mob-sep">•</span>
+        <span id="mob-speed">|V| 0.00 m/s</span>
+        <span class="mob-sep">•</span>
+        <span id="mob-tires">TIRES +0.00m</span>
+        <span class="mob-sep">•</span>
+        <span id="mob-clock">T=0.00s</span>
+      </div>
+
+      <!-- Finale or Failure Callout Toast inside Viewport -->
+      <div id="outcome-banner" class="outcome-banner hidden" role="status" aria-live="polite">
+        <div id="outcome-code" class="outcome-code">TAKE 606 VERIFIED</div>
+        <div id="outcome-text" class="outcome-text">
+          TAKE 606 — ISN'T IT NICE WHEN THINGS JUST WORK?
+        </div>
+      </div>
+
+      <!-- Right-Side Physics Sandbox & Telemetry Panel -->
+      <aside id="sandbox-drawer" class="sandbox-drawer" aria-label="Physics Sandbox and Telemetry">
+        <!-- Live Rapier3D Telemetry -->
+        <section class="panel-section">
+          <div class="section-row-head">
+            <span class="section-label">RAPIER3D 120 HZ TELEMETRY</span>
+            <span id="telemetry-clock" class="mono-val">T = 0.00s</span>
+          </div>
+          <div class="telemetry-grid">
+            <div class="metric-cell">
+              <span class="metric-k">STAGES CLEARED</span>
+              <span id="metric-stages" class="metric-v">0 / 13</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-k">ACTIVE BODY |V|</span>
+              <span id="metric-speed" class="metric-v">0.00 m/s</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-k">KINETIC / POT.</span>
+              <span id="metric-energy" class="metric-v">0.0 / 618 J</span>
+            </div>
+            <div class="metric-cell">
+              <span class="metric-k">UPHILL TIRES ΔX</span>
+              <span id="metric-tires" class="metric-v">+0.00 m</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stage Inspector & Direct Trigger -->
+        <section class="panel-section">
+          <div class="section-row-head">
+            <span id="inspector-stage-code" class="section-label">STAGE 01 • KICKOFF BEARING</span>
+            <button id="btn-trigger-stage" class="btn-mini-action" type="button">
+              Trigger Stage 01
+            </button>
+          </div>
+          <p id="inspector-stage-desc" class="inspector-desc">
+            Chrome steel transmission bearing launched down a 14° milled walnut channel into the brass synchro ring.
+          </p>
+        </section>
+
+        <!-- Physics Tuning Sliders -->
+        <section class="panel-section">
+          <div class="section-row-head">
+            <span class="section-label">PHYSICAL TUNING PARAMETERS</span>
+            <span id="active-preset-tag" class="mono-tag">TAKE #606</span>
+          </div>
+
+          <label class="slider-row" for="slider-impulse">
+            <span class="slider-name">Launch Bearing Impulse</span>
+            <span id="val-impulse" class="slider-val">1.00x</span>
+            <input id="slider-impulse" type="range" min="0.60" max="1.80" step="0.05" value="1.00" />
+          </label>
+
+          <label class="slider-row" for="slider-cw-mass">
+            <span class="slider-name">Tire Copper Counterweight</span>
+            <span id="val-cw-mass" class="slider-val">5.80 kg</span>
+            <input id="slider-cw-mass" type="range" min="0.15" max="8.00" step="0.05" value="5.80" />
+          </label>
+
+          <label class="slider-row" for="slider-friction">
+            <span class="slider-name">Surface Friction Scale</span>
+            <span id="val-friction" class="slider-val">1.00x</span>
+            <input id="slider-friction" type="range" min="0.40" max="1.60" step="0.05" value="1.00" />
+          </label>
+
+          <label class="slider-row" for="slider-gravity">
+            <span class="slider-name">Gravity Acceleration</span>
+            <span id="val-gravity" class="slider-val">1.00g (9.81 m/s²)</span>
+            <input id="slider-gravity" type="range" min="0.50" max="1.50" step="0.05" value="1.00" />
+          </label>
+
+          <div class="speed-row" role="group" aria-label="Simulation Speed">
+            <span class="slider-name">Sim Speed</span>
+            <div class="speed-pills">
+              <button type="button" class="speed-btn" data-speed="0.25">0.25x</button>
+              <button type="button" class="speed-btn" data-speed="0.5">0.5x</button>
+              <button type="button" class="speed-btn active" data-speed="1">1.0x</button>
+              <button type="button" class="speed-btn" data-speed="2">2.0x</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Rapier3D Debug Overlays -->
+        <section class="panel-section">
+          <div class="section-row-head">
+            <span class="section-label">RAPIER3D VECTOR OVERLAYS</span>
+          </div>
+          <div class="overlay-toggles">
+            <button id="toggle-com" type="button" class="overlay-btn" data-overlay="comMarkers">
+              CoM Offset Markers
+            </button>
+            <button id="toggle-wireframes" type="button" class="overlay-btn" data-overlay="wireframes">
+              Collider Wireframes
+            </button>
+            <button id="toggle-velocity" type="button" class="overlay-btn" data-overlay="velocityVectors">
+              Velocity Vectors
+            </button>
+            <button id="toggle-impulse" type="button" class="overlay-btn" data-overlay="impulseArrows">
+              Contact Impulses
+            </button>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Bottom 13-Stage Interactive Timeline Strip -->
+      <nav class="stage-timeline" aria-label="13-Stage Chain Reaction Timeline">
+        <div id="stage-strip" class="stage-strip"></div>
+      </nav>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
