@@ -1156,12 +1156,12 @@ export class CogworksSceneView {
 
       case 'tire':
       case 'uphill-tire': {
-        // Sculpted radial automotive tire (visual R = 0.85 * 0.52m = 0.442m, width = 0.20m)
+        // Sculpted radial automotive tire (visual R = 0.85 * 0.52m = 0.442m, width = 0.16m)
         // Gives a crisp 0.156m clearance when the 0.52m physics sphere colliders touch (center-to-center = 1.04m)
-        // so adjacent tires NEVER visually overlap or fuse in perspective!
+        // and a single cohesive cylindrical tread profile with zero double-ring Z silhouette at oblique camera angles.
         const R = entry.radius * 0.85;
         const tireTread = new THREE.Mesh(
-          new THREE.CylinderGeometry(R, R, 0.20, 36, 1, false),
+          new THREE.CylinderGeometry(R, R, 0.16, 40, 1, false),
           this.materials.tireRubber
         );
         tireTread.rotation.x = Math.PI / 2;
@@ -1169,10 +1169,10 @@ export class CogworksSceneView {
         tireTread.receiveShadow = true;
         g.add(tireTread);
 
-        // Molded rubber sidewalls (outer radius stays within R = 0.442m)
-        [-0.088, 0.088].forEach((oz) => {
+        // Flush sidewall shoulder bevels (stay strictly within z = ±0.08m and outer radius R)
+        [-0.068, 0.068].forEach((oz) => {
           const wall = new THREE.Mesh(
-            new THREE.TorusGeometry(R * 0.78, R * 0.19, 14, 36),
+            new THREE.TorusGeometry(R * 0.82, 0.020, 12, 36),
             this.materials.tireRubber
           );
           wall.position.set(0, 0, oz);
@@ -1180,27 +1180,27 @@ export class CogworksSceneView {
         });
 
         // 8 crisp radial sidewall index bars so uphill wheel rotation is unmistakable in motion
-        const lugGeo = new THREE.BoxGeometry(0.085, 0.024, 0.018);
+        const lugGeo = new THREE.BoxGeometry(0.085, 0.024, 0.014);
         for (let l = 0; l < 8; l++) {
           const la = (l / 8) * Math.PI * 2;
           const lug = new THREE.Mesh(lugGeo, this.materials.brass);
-          lug.position.set(Math.cos(la) * (R * 0.80), Math.sin(la) * (R * 0.80), 0.105);
+          lug.position.set(Math.cos(la) * (R * 0.80), Math.sin(la) * (R * 0.80), 0.082);
           lug.rotation.z = la;
           g.add(lug);
         }
 
         // Deep-dish alloy rim barrel (dark gunmetal inner well so the copper counterweight inside stands out)
         const innerWell = new THREE.Mesh(
-          new THREE.CylinderGeometry(R * 0.62, R * 0.62, 0.17, 32),
+          new THREE.CylinderGeometry(R * 0.62, R * 0.62, 0.14, 32),
           this.materials.castIron
         );
         innerWell.rotation.x = Math.PI / 2;
         g.add(innerWell);
 
         // Outer machined alloy wheel lip
-        [-0.095, 0.095].forEach((oz) => {
+        [-0.072, 0.072].forEach((oz) => {
           const lip = new THREE.Mesh(
-            new THREE.TorusGeometry(R * 0.62, 0.024, 12, 32),
+            new THREE.TorusGeometry(R * 0.62, 0.022, 12, 32),
             this.materials.aluminum
           );
           lip.position.set(0, 0, oz);
@@ -1217,24 +1217,24 @@ export class CogworksSceneView {
           this.materials.copper
         );
         cwArc.rotation.z = cwCenterAngle - arcSpan * 0.5;
-        cwArc.position.set(0, 0, 0.068);
+        cwArc.position.set(0, 0, 0.052);
         g.add(cwArc);
 
         const cwArcBack = cwArc.clone();
-        cwArcBack.position.set(0, 0, -0.068);
+        cwArcBack.position.set(0, 0, -0.052);
         g.add(cwArcBack);
 
         // 5 sculpted alloy spokes on the wheel face + center cap
-        const spokeGeo = new THREE.BoxGeometry(R * 1.18, 0.056, 0.032);
+        const spokeGeo = new THREE.BoxGeometry(R * 1.18, 0.056, 0.024);
         for (let s = 0; s < 5; s++) {
           const spFront = new THREE.Mesh(spokeGeo, this.materials.chrome);
           spFront.rotation.z = (s / 5) * Math.PI;
-          spFront.position.z = 0.095;
+          spFront.position.z = 0.072;
           g.add(spFront);
         }
 
         const centerCap = new THREE.Mesh(
-          new THREE.CylinderGeometry(0.078, 0.078, 0.22, 20),
+          new THREE.CylinderGeometry(0.078, 0.078, 0.17, 20),
           this.materials.brass
         );
         centerCap.rotation.x = Math.PI / 2;
