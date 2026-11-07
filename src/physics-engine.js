@@ -754,7 +754,7 @@ export class CogworksPhysicsSimulation {
     });
 
     // Parquet floor rollout deck with subtle -2.8° gallery slope from x = 3.6 to x = 8.5
-    addFixedBox('s8-muffler-perch', 3.22, 0.72, 0, 0.26, 0.05, 0.42, 0, 0.5, 0.1, {
+    addFixedBox('s8-muffler-perch', 3.45, 0.72, 0, 0.28, 0.05, 0.42, 0, 0.5, 0.1, {
       kind: 'brass',
       stage: 8
     });
@@ -764,7 +764,7 @@ export class CogworksPhysicsSimulation {
     });
 
     const mufflerRb = this.world.createRigidBody(
-      planarDynamicDesc(3.22, 1.11, 0).setGravityScale(0.0).setLinearDamping(0.01).setAngularDamping(0.01)
+      planarDynamicDesc(3.45, 1.11, 0).setGravityScale(0.0).setLinearDamping(0.01).setAngularDamping(0.01)
     );
     this.world.createCollider(
       RAPIER.ColliderDesc.ball(0.34).setMass(2.1).setFriction(0.12 * fScale).setRestitution(0.45),
@@ -1102,7 +1102,17 @@ export class CogworksPhysicsSimulation {
     for (let i = 0; i < 25; i++) {
       this.world.step();
     }
-    // Re-capture settled Tire initial positions
+    // Zero out any tiny pre-settle velocities and re-capture settled Tire initial positions
+    const mInit = this.bodies.get('exhaustMuffler')?.rb;
+    if (mInit) {
+      mInit.setTranslation({ x: 3.45, y: 1.11, z: 0 }, true);
+      mInit.setLinvel({ x: 0, y: 0, z: 0 }, true);
+      mInit.setAngvel({ x: 0, y: 0, z: 0 }, true);
+    }
+    for (const entry of this.bodies.values()) {
+      entry.rb.setLinvel({ x: 0, y: 0, z: 0 }, true);
+      entry.rb.setAngvel({ x: 0, y: 0, z: 0 }, true);
+    }
     this.uphillTires.forEach((t) => {
       const p = t.rb.translation();
       t.initX = p.x;
@@ -1283,20 +1293,21 @@ export class CogworksPhysicsSimulation {
     if (this._stageFlags.s3CamRotated && !this._stageFlags.s4TrolleyReleased && rPos.x > -17.15) {
       this._stageFlags.s4TrolleyReleased = true;
       const boost = this.params.launchImpulse;
-      if (boost > 1.35) {
-        // Take #419: Excess impulse launches zipline trolley on high ballistic overshoot trajectory!
-        trolley.setLinvel({ x: 9.2, y: 3.65, z: 0 }, true);
-      } else {
-        // Take #606: Clean gravity-driven roll down the -11.5° cable rail
-        trolley.applyImpulse({ x: 3.2 * boost, y: -0.2, z: 0 }, true);
-      }
+      trolley.applyImpulse({ x: 3.2 * boost, y: -0.2, z: 0 }, true);
       this.markStageActive(4, 3.6 * boost, 'cable-whirr');
     }
 
     // Stage 04 -> Stage 05 (or Take #419 Overshoot!)
     const tPos = trolley.translation();
     if (this._stageFlags.s4TrolleyReleased && !this._stageFlags.s5ValvesStarted && !this._stageFlags.s4Overshot) {
-      if (tPos.x > -8.35 && tPos.y > 2.48) {
+      if (this.params.launchImpulse > 1.35 && !this._stageFlags.s4JumpLaunched && tPos.x > -9.65) {
+        // Take #419: Over-speeding trolley hits the end of the Stage 04 cable rail and vaults over the Stage 05 valves!
+        this._stageFlags.s4JumpLaunched = true;
+        trolley.setTranslation({ x: -9.50, y: 2.42, z: 0 }, true);
+        trolley.setLinvel({ x: 5.35, y: 3.35, z: 0 }, true);
+        trolley.setAngvel({ x: 0, y: 0, z: -6.5 }, true);
+      }
+      if (tPos.x > -7.85 && tPos.y > 2.48) {
         // Trolley vaulted OVER the intake valve dominoes into the overshoot tray!
         this._stageFlags.s4Overshot = true;
         this.stageStatus[4] = 'failed';
@@ -1307,7 +1318,7 @@ export class CogworksPhysicsSimulation {
           reason: this.failedReason,
           trolleyPos: { x: Number(tPos.x.toFixed(2)), y: Number(tPos.y.toFixed(2)) }
         });
-      } else if (tPos.x > -8.55 && tPos.y <= 2.48) {
+      } else if (this.params.launchImpulse <= 1.35 && tPos.x > -8.55 && tPos.y <= 2.48) {
         // Trolley strikes Intake Valve #1!
         this._stageFlags.s5ValvesStarted = true;
         this.intakeValves[0].applyImpulse({ x: 2.35, y: 0, z: 0 }, true);
@@ -1345,16 +1356,47 @@ export class CogworksPhysicsSimulation {
       }
     }
 
+    // Stage 06: Hold tires stationary on their brass chocks until Valve #8 nudges Tire #1
+    if (!this._stageFlags.s6TiresNudged) {
+      for (const t of this.uphillTires) {
+        t.rb.setTranslation({ x: t.initX, y: t.initY, z: 0 }, true);
+        t.rb.setLinvel({ x: 0, y: 0, z: 0 }, true);
+        t.rb.setAngvel({ x: 0, y: 0, z: 0 }, true);
+      }
+    }
+    // Stage 08: Hold exhaust muffler stationary on its perch until seesaw launches it
+    if (!this._stageFlags.s8MufflerLaunched) {
+      const mHold = this.bodies.get('exhaustMuffler').rb;
+      mHold.setTranslation({ x: 3.45, y: 1.11, z: 0 }, true);
+      mHold.setLinvel({ x: 0, y: 0, z: 0 }, true);
+      mHold.setAngvel({ x: 0, y: 0, z: 0 }, true);
+    }
+
     // Stage 06: Monitor the 3 Uphill Counterweighted Tires climbing the 7.5° timber ramp
     if (this._stageFlags.s6TiresNudged && !this._stageFlags.s7PistonReleased && !this.failedStage) {
       const t1 = this.uphillTires[0];
+      const t2 = this.uphillTires[1];
       const t3 = this.uphillTires[2];
       const t1Pos = t1.rb.translation();
+      const t2Pos = t2.rb.translation();
       const t3Pos = t3.rb.translation();
       const t1Vel = t1.rb.linvel();
       const t3DeltaX = t3Pos.x - t3.initX;
 
-      if (t3DeltaX > 0.21) {
+      if (this.params.tireCounterweightMass >= 3.5) {
+        if (!this._stageFlags.s6Tire2Cascaded && t2Pos.x - t1Pos.x < 1.055) {
+          this._stageFlags.s6Tire2Cascaded = true;
+          t2.rb.applyImpulse({ x: 2.25, y: 0.28, z: 0 }, true);
+          t2.rb.applyTorqueImpulse({ x: 0, y: 0, z: -1.65 }, true);
+        }
+        if (!this._stageFlags.s6Tire3Cascaded && t3Pos.x - t2Pos.x < 1.055) {
+          this._stageFlags.s6Tire3Cascaded = true;
+          t3.rb.applyImpulse({ x: 2.45, y: 0.32, z: 0 }, true);
+          t3.rb.applyTorqueImpulse({ x: 0, y: 0, z: -1.85 }, true);
+        }
+      }
+
+      if (t3DeltaX > 0.48) {
         // Tire #3 climbed to the upper crest of the ramp and trips Stage 07 Piston Hammer!
         this._stageFlags.s7PistonReleased = true;
         const piston = this.bodies.get('pistonHammer').rb;
@@ -1362,9 +1404,9 @@ export class CogworksPhysicsSimulation {
         this.markStageActive(7, 4.2, 'piston-slam');
       } else {
         // Check if tires have stalled on the uphill ramp (Take #142)
-        if (t1Pos.x - t1.initX < 0.18) {
+        if (t3DeltaX < 0.05 && t1Vel.x < 0.25) {
           this._stageFlags.s6TireStallTimer += this.dt;
-          if (this._stageFlags.s6TireStallTimer > 1.65) {
+          if (this._stageFlags.s6TireStallTimer > 1.25) {
             const dx1 = Number((t1Pos.x - t1.initX).toFixed(2));
             this.stageStatus[6] = 'failed';
             this.failedStage = 6;
@@ -1374,8 +1416,6 @@ export class CogworksPhysicsSimulation {
               tire1DeltaX: dx1
             });
           }
-        } else {
-          this._stageFlags.s6TireStallTimer = 0;
         }
       }
     }
@@ -1392,11 +1432,30 @@ export class CogworksPhysicsSimulation {
       muffler.applyTorqueImpulse({ x: 0, y: 0, z: -1.4 }, true);
       this.markStageActive(8, 5.8, 'muffler-roll');
     }
+    if (this._stageFlags.s8MufflerLaunched) {
+      const piston = this.bodies.get('pistonHammer').rb;
+      if (pPos.y < 1.08) {
+        piston.setTranslation({ x: 1.05, y: 1.05, z: 0 }, true);
+        piston.setLinvel({ x: 0, y: 0, z: 0 }, true);
+        piston.setAngvel({ x: 0, y: 0, z: 0 }, true);
+      }
+      // Settle uphill tires cleanly at the upper crest once they reach the stop
+      for (const t of this.uphillTires) {
+        const tv = t.rb.linvel();
+        if (tv.x < 0) {
+          t.rb.setLinvel({ x: 0, y: 0, z: 0 }, true);
+          t.rb.setAngvel({ x: 0, y: 0, z: 0 }, true);
+        }
+      }
+    }
 
-    // Stage 08 -> Stage 09: Rolling Exhaust Muffler reaches trip lever at x > 8.05
+    // Stage 08 -> Stage 09: Rolling Exhaust Muffler reaches trip lever at x > 8.02
     const mPos = this.bodies.get('exhaustMuffler').rb.translation();
     if (this._stageFlags.s8MufflerLaunched && !this._stageFlags.s9GlassStarted && mPos.x > 8.02) {
       this._stageFlags.s9GlassStarted = true;
+      const muffler = this.bodies.get('exhaustMuffler').rb;
+      muffler.setLinvel({ x: 0.15, y: 0, z: 0 }, true);
+      muffler.setAngvel({ x: 0, y: 0, z: -0.4 }, true);
       const tripArm = this.bodies.get('mufflerTripArm').rb;
       tripArm.applyTorqueImpulse({ x: 0, y: 0, z: -2.4 }, true);
       this.glassLouvers[0].applyImpulse({ x: 3.6, y: 0.1, z: 0 }, true);
@@ -1469,10 +1528,10 @@ export class CogworksPhysicsSimulation {
       this.emitStageEvent(13, 'key_fob_pressed', { sound: 'key-fob-beep' });
     }
 
-    // Stage 13b: Hero Kinetic Sculpture Coupe rolls down tilted trailer past finish sensor (x > 30.25)
+    // Stage 13b: Hero Kinetic Sculpture Coupe rolls down tilted trailer past finish sensor (x > 29.55)
     const coupe = this.bodies.get('heroCoupe').rb;
     const cPos = coupe.translation();
-    if (this._stageFlags.s13KeyFobPressed && !this._stageFlags.s13FinaleComplete && cPos.x > 30.20) {
+    if (this._stageFlags.s13KeyFobPressed && !this._stageFlags.s13FinaleComplete && cPos.x > 29.55) {
       this._stageFlags.s13FinaleComplete = true;
       for (let s = 1; s <= 13; s++) {
         this.stageStatus[s] = 'complete';
@@ -1483,6 +1542,11 @@ export class CogworksPhysicsSimulation {
         sound: 'finale-chord',
         banner: "TAKE 606 — ISN'T IT NICE WHEN THINGS JUST WORK?"
       });
+    }
+    if (this._stageFlags.s13FinaleComplete && cPos.x >= 30.28) {
+      coupe.setTranslation({ x: 30.28, y: 1.56, z: 0 }, true);
+      coupe.setLinvel({ x: 0, y: 0, z: 0 }, true);
+      coupe.setAngvel({ x: 0, y: 0, z: 0 }, true);
     }
   }
 

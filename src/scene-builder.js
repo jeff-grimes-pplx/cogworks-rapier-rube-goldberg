@@ -122,33 +122,34 @@ function createStagePlaqueTexture(stageDef, status = 'ready') {
 
 function createFinaleBannerTexture() {
   const canvas = document.createElement('canvas');
-  canvas.width = 1280;
-  canvas.height = 260;
+  canvas.width = 1536;
+  canvas.height = 320;
   const ctx = canvas.getContext('2d');
 
   // Clean museum ivory canvas banner with crimson & brass trim — single plain title line only
   ctx.fillStyle = '#faf6ee';
-  ctx.fillRect(0, 0, 1280, 260);
+  ctx.fillRect(0, 0, 1536, 320);
 
   ctx.strokeStyle = '#dc2626';
-  ctx.lineWidth = 12;
-  ctx.strokeRect(12, 12, 1256, 236);
+  ctx.lineWidth = 16;
+  ctx.strokeRect(14, 14, 1508, 292);
 
   ctx.strokeStyle = '#b45309';
-  ctx.lineWidth = 3;
-  ctx.strokeRect(26, 26, 1228, 208);
+  ctx.lineWidth = 4;
+  ctx.strokeRect(32, 32, 1472, 256);
 
   ctx.fillStyle = '#18181b';
-  ctx.font = '800 42px "Space Grotesk", sans-serif';
+  ctx.font = '800 52px "Space Grotesk", sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText("TAKE 606 — ISN'T IT NICE WHEN THINGS JUST WORK?", 640, 130);
+  ctx.fillText("TAKE 606 — ISN'T IT NICE WHEN THINGS JUST WORK?", 768, 160);
 
   const tex = new THREE.CanvasTexture(canvas);
   tex.colorSpace = THREE.SRGBColorSpace;
   return tex;
 }
 
+if (typeof window !== "undefined") window.THREE = THREE;
 export class CogworksSceneView {
   constructor(canvas) {
     this.canvas = canvas;
@@ -645,8 +646,8 @@ export class CogworksSceneView {
       map: bannerTex,
       side: THREE.DoubleSide
     });
-    this.finaleBannerMesh = new THREE.Mesh(new THREE.PlaneGeometry(3.15, 0.58), bannerMat);
-    this.finaleBannerMesh.position.set(30.35, 3.45, -1.05);
+    this.finaleBannerMesh = new THREE.Mesh(new THREE.PlaneGeometry(4.50, 0.88), bannerMat);
+    this.finaleBannerMesh.position.set(29.95, 3.08, -0.55);
     this.finaleBannerMesh.scale.set(1, 0.01, 1);
     this.finaleBannerMesh.visible = false;
     this.environmentGroup.add(this.finaleBannerMesh);
@@ -687,7 +688,12 @@ export class CogworksSceneView {
       const mat = this._resolveStaticMaterial(st.kind);
       const geo = new THREE.BoxGeometry(st.hx * 2, st.hy * 2, st.hz * 2);
       const mesh = new THREE.Mesh(geo, mat);
-      mesh.position.set(st.x, st.y, st.z);
+      const yVisLift = (st.id === 's6-timber-ramp' || st.id.startsWith('s6-tire-chock')) ? 0.078 : 0.0;
+      mesh.position.set(
+        st.x - Math.sin(st.angleZ || 0) * yVisLift,
+        st.y + Math.cos(st.angleZ || 0) * yVisLift,
+        st.z
+      );
       mesh.rotation.z = st.angleZ || 0;
       mesh.castShadow = true;
       mesh.receiveShadow = true;
@@ -1150,11 +1156,12 @@ export class CogworksSceneView {
 
       case 'tire':
       case 'uphill-tire': {
-        // Sculpted radial automotive tire (R = 0.52m) with 5-spoke alloy wheel
-        // AND internal Copper Counterweight Crescent housed completely INSIDE the rim barrel!
-        const R = entry.radius;
+        // Sculpted radial automotive tire (visual R = 0.85 * 0.52m = 0.442m, width = 0.20m)
+        // Gives a crisp 0.156m clearance when the 0.52m physics sphere colliders touch (center-to-center = 1.04m)
+        // so adjacent tires NEVER visually overlap or fuse in perspective!
+        const R = entry.radius * 0.85;
         const tireTread = new THREE.Mesh(
-          new THREE.CylinderGeometry(R, R, 0.34, 36, 1, false),
+          new THREE.CylinderGeometry(R, R, 0.20, 36, 1, false),
           this.materials.tireRubber
         );
         tireTread.rotation.x = Math.PI / 2;
@@ -1162,8 +1169,8 @@ export class CogworksSceneView {
         tireTread.receiveShadow = true;
         g.add(tireTread);
 
-        // Molded rubber sidewalls (outer radius stays within R = 0.52m)
-        [-0.15, 0.15].forEach((oz) => {
+        // Molded rubber sidewalls (outer radius stays within R = 0.442m)
+        [-0.088, 0.088].forEach((oz) => {
           const wall = new THREE.Mesh(
             new THREE.TorusGeometry(R * 0.78, R * 0.19, 14, 36),
             this.materials.tireRubber
@@ -1172,52 +1179,62 @@ export class CogworksSceneView {
           g.add(wall);
         });
 
+        // 8 crisp radial sidewall index bars so uphill wheel rotation is unmistakable in motion
+        const lugGeo = new THREE.BoxGeometry(0.085, 0.024, 0.018);
+        for (let l = 0; l < 8; l++) {
+          const la = (l / 8) * Math.PI * 2;
+          const lug = new THREE.Mesh(lugGeo, this.materials.brass);
+          lug.position.set(Math.cos(la) * (R * 0.80), Math.sin(la) * (R * 0.80), 0.105);
+          lug.rotation.z = la;
+          g.add(lug);
+        }
+
         // Deep-dish alloy rim barrel (dark gunmetal inner well so the copper counterweight inside stands out)
         const innerWell = new THREE.Mesh(
-          new THREE.CylinderGeometry(R * 0.62, R * 0.62, 0.28, 32),
+          new THREE.CylinderGeometry(R * 0.62, R * 0.62, 0.17, 32),
           this.materials.castIron
         );
         innerWell.rotation.x = Math.PI / 2;
         g.add(innerWell);
 
         // Outer machined alloy wheel lip
-        [-0.16, 0.16].forEach((oz) => {
+        [-0.095, 0.095].forEach((oz) => {
           const lip = new THREE.Mesh(
-            new THREE.TorusGeometry(R * 0.62, 0.028, 12, 32),
+            new THREE.TorusGeometry(R * 0.62, 0.024, 12, 32),
             this.materials.aluminum
           );
           lip.position.set(0, 0, oz);
           g.add(lip);
         });
 
-        // Internal Copper Counterweight Crescent bolted INSIDE the rim barrel (at r = 0.24m < rim 0.32m)
+        // Internal Copper Counterweight Crescent bolted INSIDE the rim barrel (at r = 0.20m < rim 0.27m)
         // Never protrudes outside the tire tread!
         const cwOffset = entry.cwOffset || { x: 0.035, y: 0.43 };
         const cwCenterAngle = Math.atan2(cwOffset.y, cwOffset.x);
-        const arcSpan = Math.PI * 0.76;
+        const arcSpan = Math.PI * 0.78;
         const cwArc = new THREE.Mesh(
-          new THREE.TorusGeometry(R * 0.45, 0.068, 14, 28, arcSpan),
+          new THREE.TorusGeometry(R * 0.44, 0.062, 14, 28, arcSpan),
           this.materials.copper
         );
         cwArc.rotation.z = cwCenterAngle - arcSpan * 0.5;
-        cwArc.position.set(0, 0, 0.11);
+        cwArc.position.set(0, 0, 0.068);
         g.add(cwArc);
 
         const cwArcBack = cwArc.clone();
-        cwArcBack.position.set(0, 0, -0.11);
+        cwArcBack.position.set(0, 0, -0.068);
         g.add(cwArcBack);
 
         // 5 sculpted alloy spokes on the wheel face + center cap
-        const spokeGeo = new THREE.BoxGeometry(R * 1.18, 0.065, 0.045);
+        const spokeGeo = new THREE.BoxGeometry(R * 1.18, 0.056, 0.032);
         for (let s = 0; s < 5; s++) {
           const spFront = new THREE.Mesh(spokeGeo, this.materials.chrome);
           spFront.rotation.z = (s / 5) * Math.PI;
-          spFront.position.z = 0.155;
+          spFront.position.z = 0.095;
           g.add(spFront);
         }
 
         const centerCap = new THREE.Mesh(
-          new THREE.CylinderGeometry(0.09, 0.09, 0.36, 20),
+          new THREE.CylinderGeometry(0.078, 0.078, 0.22, 20),
           this.materials.brass
         );
         centerCap.rotation.x = Math.PI / 2;
